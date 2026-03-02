@@ -1,0 +1,17 @@
+# WGV attachments (videos and images)
+wgv_attachments/
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Temporary files
+*.tmp
+*.bak
