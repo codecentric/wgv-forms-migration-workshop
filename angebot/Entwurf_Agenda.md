@@ -58,11 +58,11 @@ Hier gibt es eine Mischung aus technischen Details klären und wir erarbeiten ei
 
 - Recap Tag 1 & Verschärfung des Scopes (~1-1.5h):
   - Review des Scope-Vorschlags vom Tag 1
-- Technische Machbarkeitsanalyse der vorgeschlagenen MVP-Masken:
-  - Welche sind technisch am einfachsten zu migrieren? (Quick Wins)
-  - Welche Abhängigkeiten und Risiken bestehen?
-- Abgrenzung:
-  - Was bleibt unverändert? (Backend/PL/SQL) vs. Was wird modernisiert? (Frontend)
+  - Technische Machbarkeitsanalyse der vorgeschlagenen MVP-Masken:
+    - Welche sind technisch am einfachsten zu migrieren? (Quick Wins)
+    - Welche Abhängigkeiten und Risiken bestehen?
+  - Abgrenzung:
+    - Was bleibt unverändert? (Backend/PL/SQL) vs. Was wird modernisiert? (Frontend)
 - Entscheidung: Welche Vaadin-Komponenten aus ICIS+ können/sollen wiederverwendert werden?
 - Festlegung: Welche Masken eignen sich für APEX Low-Code vs. Custom Development?
 - Identifikation von Prozessen, die durch AI-Agents ersetzt/optimiert werden können
@@ -72,7 +72,6 @@ Hier gibt es eine Mischung aus technischen Details klären und wir erarbeiten ei
 
 - Integration von AI ins System, wie geht das und was gilt es zu beachten (MCP/ Integration ins System / RBAC / Hosting...) (1-2h)
 - Vorstellung bestehender Services / Stored Procedures
-  Entwurf eines möglichen Architekturdiagramms (Frontend / Integrationsschicht)
 - Diskussion von Ansätzen für die Integrationsschicht (Spring Boot, Oracle REST Data Services)
 - Diskussion von Deploymentansätzen (VMs, Docker, Kubernetes …)
 - Entwurf eines möglichen Architekturdiagramms (Frontend / Integrationsschicht)
