@@ -59,7 +59,11 @@ This is a **documentation and planning repository** for a codecentric workshop w
 ├── context/                    # Interpretations and explanations of diagrams
 │   ├── DIAGRAM_REFERENCES.md                    # Registry mapping diagrams to interpretations
 │   ├── icis_oracle_forms_architektur.md         # Interpretation of Oracle Forms architecture
-│   └── architektur_schaubild_icis_gesamt.md     # Interpretation of complete ICIS architecture
+│   ├── architektur_schaubild_icis_gesamt.md     # Interpretation of complete ICIS architecture
+│   ├── Modernisierungsworkshop-Draft.md         # WGV's detailed workshop expectations
+│   └── workshop_mapping.md                      # Mapping of committed agenda to WGV expectations
+├── facilitation/               # Workshop facilitation methods and frameworks
+│   └── decision_frameworks.md                   # Decision-making frameworks for IT transformation
 └── wgv_attachments/           # Supporting media
     ├── *_ICIS-*.jpg           # Screenshots of current ICIS system
     └── *.mp4                  # Demo videos of Oracle Forms workflows
@@ -110,7 +114,8 @@ These role definitions are used to:
 ## Working with Workshop Materials
 
 ### Current Status
-- **Latest agenda**: `angebot/2026-03-02_Entwurf_Agenda_v2.md` (more structured with time estimates and decision points)
+- **Committed agenda**: `20260303_commited_agend.md` (agreed with WGV for 28-30 April 2026)
+- **Detailed draft**: `angebot/2026-03-02_Entwurf_Agenda_v2.md` (reference for time estimates and detailed structure)
 - Workshop materials are in **German**
 - Modified files in git: Check `Entwurf_Agenda.md` for recent changes
 - **Role definitions**: See `/rollen` directory for expert personas (currently without workshop day-specific goals)
@@ -128,6 +133,14 @@ These role definitions are used to:
 - Herr Machowetz (WGV)
 - codecentric team: Herr Ponce (Sócrates), Herr Engelen
 
+## Facilitation Methods & Frameworks
+
+The `/facilitation` directory contains methods, frameworks, and tools for facilitating the workshop:
+
+- **decision_frameworks.md**: Collection of decision-making frameworks from IT transformation (Weighted Decision Matrix, ADR, RICE Scoring, Technology Radar, Cynefin, etc.) with practical application guidance for each workshop day
+
+These frameworks help us facilitate structured discussions and decision-making processes with WGV during the workshop.
+
 ## Diagrams and Context Documentation
 
 ### Available Diagrams
@@ -135,12 +148,19 @@ These role definitions are used to:
 1. **`icis_oracle_forms_architektur.svg`**: Detailed Oracle Forms 3-tier architecture diagram showing UI Presentation, Application Logic, Data Manager, and PL/SQL Engine layers
 2. **`architektur_schaubild_icis_gesamt.svg`**: Complete ICIS system architecture showing all components (ICIS+, Forms, APEX), external integrations (SAP, COR Life, GDV, DMS), and middleware
 
+### Technical Reference Documents
+
+Technical reference documents explain concepts, technologies, and best practices relevant to the WGV ICIS modernization project:
+
+1. **`plsql_functions_vs_procedures.md`**: Oracle PL/SQL fundamentals - differences between functions and procedures (language specification vs. best practices), RETURN vs. OUT parameters, integration layer examples
+
 ### Convention: Separating Visual and Textual Documentation
 
 - **`diagrams/` directory**: Contains only renderable diagram files (`.svg`, `.png`, etc.)
-- **`context/` directory**: Contains markdown interpretations of diagrams
+- **`context/` directory**: Contains markdown interpretations of diagrams AND technical reference documents
 - **Naming convention**: Interpretation files have the same name as their diagram (e.g., `icis_oracle_forms_architektur.md` interprets `icis_oracle_forms_architektur.svg`)
-- **Registry**: `context/DIAGRAM_REFERENCES.md` maintains a table mapping each interpretation to its source diagram
+- **Diagram Registry**: `context/DIAGRAM_REFERENCES.md` maintains a table mapping each interpretation to its source diagram
+- **Technical References Registry**: `context/TECH_REFERENCES.md` maintains a table of all technical reference documents organized by category
 
 This separation keeps visual assets clean while providing detailed textual explanations in a searchable format.
 
@@ -152,3 +172,4 @@ This separation keeps visual assets clean while providing detailed textual expla
 - Consider different participant groups when structuring content
 - Reference attachments in `wgv_attachments/` for context on current ICIS system
 - When adding new diagrams: Create matching interpretation in `context/` and update `DIAGRAM_REFERENCES.md`
+- When adding technical reference documents: Create in `context/` and update `TECH_REFERENCES.md`

@@ -51,6 +51,23 @@ Der UX/UI Expert ist verantwortlich für die Gestaltung einer benutzerzentrierte
 - **Design Thinking**: Workshops zur gemeinsamen Ideenfindung
 - **Analytics**: Verständnis für datengetriebene UX-Optimierung
 
+## Theoretische Grundlagen
+
+**Referenz**: `context/gestaltgesetze_ux_laws_cognitive_bias.md`
+
+Der UX/UI Expert wendet fundierte Kenntnisse der Wahrnehmungspsychologie und Designprinzipien an:
+
+- **Gestaltgesetze** (9 Prinzipien): Ähnlichkeit, Nähe, Prägnanz, Geschlossenheit, Kontinuität, gemeinsame Bewegung, gemeinsame Region, Symmetrie, Verbundenheit
+- **UX Laws** (14 Gesetze): Hick's Law, Fitts' Law, Jakob's Law, Miller's Law, Zeigarnik-Effekt, Von Restorff-Effekt, Tesler's Law, Serial Position-Effekt, Postel's Law, Parkinson's Law, Pareto-Prinzip, Occam's Razor, Hofstadter's Law, Aesthetic-Usability Effect, Doherty Threshold, Goal-Gradient Effect
+- **Kognitive Verzerrungen** (7 Bias): Anchoring, Default Bias, Framing, Social Proof, künstliche Verknappung, Noble Edge Effect, Halo Effect
+
+Diese Prinzipien werden bewusst eingesetzt, um:
+- Visuell klare und verständliche Oberflächen zu gestalten
+- Benutzerflüsse zu optimieren und Entscheidungsprozesse zu erleichtern
+- Kognitive Last zu reduzieren
+- Manipulation zu vermeiden (keine Dark Patterns)
+- Positive Nutzererfahrung sicherzustellen
+
 ## Zusammenarbeit mit anderen Rollen
 
 - **Solution Architect**: UX-Anforderungen in technische Architektur übersetzen
