@@ -139,6 +139,23 @@ The `/facilitation` directory contains methods, frameworks, and tools for facili
 
 - **decision_frameworks.md**: Collection of decision-making frameworks from IT transformation (Weighted Decision Matrix, ADR, RICE Scoring, Technology Radar, Cynefin, etc.) with practical application guidance for each workshop day
 
+### Tag 1 Facilitation Guides
+
+- **tag1_domain_mapping_guide.md**: Domain-Driven Design (DDD) methodology for domain discovery (~1.5-2h):
+  - Activity 1: Event Storming Light (~45-60min)
+  - Activity 2: Context Mapping Interview (~30-45min)
+  - Activity 3: Core Domain Chart (~15-20min)
+  - Activity 4: Domain Storytelling (~20-30min)
+  - Complete with guiding questions, expected outputs, templates, and integration with other Day 1 activities
+
+- **tag1_icis_deep_dive_guide.md**: Structured information gathering on ICIS-Klassik and ICIS+ (~90-120min):
+  - Part A: ICIS-Klassik (Oracle Forms) Deep Dive - 35 questions across 5 categories (~40-50min)
+  - Part B: ICIS+ (Vaadin) Deep Dive - 25 questions across 4 categories (~30-40min)
+  - Part C: Comparative Analysis & Migration Strategy (~20-30min)
+  - 9 ready-to-use templates (service catalogs, component inventories, comparison matrices)
+  - Facilitator role: WGV presents, we ask structured questions and document
+  - Expected outputs: Service inventory, reusability assessment, pain points catalog, migration strategy canvas
+
 These frameworks help us facilitate structured discussions and decision-making processes with WGV during the workshop.
 
 ## Diagrams and Context Documentation

@@ -8,6 +8,53 @@
 
 ---
 
+## Workshop-Zeitstruktur (alle 3 Tage identisch)
+
+**Gesamtzeit**: 09:00 - 17:00 (8 Stunden)
+
+### Zeitaufteilung
+
+**Vormittag** (09:00 - 12:00):
+- **Arbeitszeit**: 2h 45min (165 Minuten)
+- **Pause**: 15 Minuten (einzuplanen zwischen 10:00-11:00)
+- **Netto-Arbeitszeit Vormittag**: 2h 45min
+
+**Mittagspause** (12:00 - 13:00):
+- **Dauer**: 1 Stunde
+
+**Nachmittag** (13:00 - 17:00):
+- **Arbeitszeit**: 3h 35min (215 Minuten)
+- **Pausen**: 
+  - 15 Minuten (erste Pause, ca. 14:30-14:45)
+  - 10 Minuten (zweite Pause, ca. 15:30-15:40)
+- **Netto-Arbeitszeit Nachmittag**: 3h 35min
+
+### Gesamtrechnung pro Tag
+
+| Zeitblock | Dauer |
+|-----------|-------|
+| Vormittag (inkl. 15min Pause) | 09:00 - 12:00 (3h) |
+| Mittagspause | 12:00 - 13:00 (1h) |
+| Nachmittag (inkl. 25min Pausen) | 13:00 - 17:00 (4h) |
+| **Gesamt** | **8 Stunden** |
+| **Netto-Arbeitszeit** | **~6h 20min** (380 Minuten) |
+
+### Empfohlene Pausenzeiten
+
+**Vormittag**:
+- 10:10 - 10:25 (15min) nach ~70min Arbeit
+
+**Nachmittag**:
+- 14:30 - 14:45 (15min) nach ~90min Arbeit
+- 15:30 - 15:40 (10min) nach weiteren ~45-60min Arbeit
+
+**Rationale**: 
+- Pausen nach 60-90min intensiver Arbeit (optimal für Konzentration)
+- Längere Pause am Nachmittag nach ~1.5h (Post-Lunch-Tief berücksichtigen)
+- Kurze Pause gegen 15:30 für finalen Sprint bis 17:00
+
+---
+
 ## Tag 1: Discovery & Scoping
 
 ### Unsere Committete Agenda

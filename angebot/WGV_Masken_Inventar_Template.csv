@@ -1,0 +1,4 @@
+Mask ID,Mask Name,Fachlicher Bereich,Nutzungshäufigkeit,Anzahl Nutzer,Komplexität,Notizen,Anzahl Felder,Externe Systeme
+VERT_001,Vertragsabschluss Neugeschäft,Vertragsverwaltung,Täglich,~50,Medium,"Integriert mit SAP, wichtigste Maske für Neugeschäft",~30,SAP
+KUND_042,Adressänderung Kunde,Kundenverwaltung,Wöchentlich,~200,Low,Einfache CRUD-Maske,~8,
+SCHA_089,Schadenanlage KFZ,Schadenbearbeitung,Täglich,~30,High,"GDV-Schnittstelle, DMS-Integration, komplex",50+,"GDV, DMS"
