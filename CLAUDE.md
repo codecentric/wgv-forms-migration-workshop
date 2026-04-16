@@ -63,7 +63,10 @@ This is a **documentation and planning repository** for a codecentric workshop w
 │   ├── Modernisierungsworkshop-Draft.md         # WGV's detailed workshop expectations
 │   └── workshop_mapping.md                      # Mapping of committed agenda to WGV expectations
 ├── facilitation/               # Workshop facilitation methods and frameworks
-│   └── decision_frameworks.md                   # Decision-making frameworks for IT transformation
+│   ├── decision_frameworks.md                   # Decision-making frameworks for IT transformation
+│   ├── tag1_domain_mapping_guide.md             # Day 1 DDD activities: Event Storming, Context Mapping, Domain Storytelling
+│   ├── tag1_icis_deep_dive_guide.md             # Day 1 ICIS-Klassik & ICIS+ analysis: 60 questions, 9 templates
+│   └── tag1_icis_deep_dive_cheat_sheet.md       # Quick reference (1-page) for ICIS Deep Dive facilitators
 └── wgv_attachments/           # Supporting media
     ├── *_ICIS-*.jpg           # Screenshots of current ICIS system
     └── *.mp4                  # Demo videos of Oracle Forms workflows
