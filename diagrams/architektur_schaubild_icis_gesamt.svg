@@ -25,15 +25,15 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4527905"
-     inkscape:cx="475.98054"
-     inkscape:cy="217.16827"
-     inkscape:window-width="2056"
-     inkscape:window-height="1185"
-     inkscape:window-x="1920"
-     inkscape:window-y="39"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="561.79634"
+     inkscape:cy="292.0351"
+     inkscape:window-width="2404"
+     inkscape:window-height="1370"
+     inkscape:window-x="18"
+     inkscape:window-y="42"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      showguides="true"><sodipodi:guide
        position="113.95583,98.674601"
        orientation="1,0"
@@ -120,7 +120,7 @@
        inkscape:stockid="TriangleStart"
        markerWidth="3"
        markerHeight="3"
-       viewBox="0 0 5.3244081 6.15538509"
+       viewBox="0 0 5.3244081 6.1553851"
        inkscape:isstock="true"
        inkscape:collect="always"
        preserveAspectRatio="none"
@@ -443,9 +443,10 @@
        style="display:inline" /></g><g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="drawing"><g
+     inkscape:label="drawing"
+     style="display:inline"><g
        id="g21683"><rect
-         style="fill:#e2efd9;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1;fill-opacity:1"
+         style="fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect762"
          width="42.458225"
          height="25.931337"
@@ -461,9 +462,9 @@
          y="0"><tspan
            x="131.8557"
            y="129.33234"
-           id="tspan51040"><tspan
+           id="tspan15137"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51038">[ icis-icisplus, icisplus-api ]</tspan></tspan></text><g
+             id="tspan15135">[ icis-icisplus, icisplus-api ]</tspan></tspan></text><g
          id="g21640"><g
            id="g12775"
            transform="translate(9.926009)"><rect
@@ -511,7 +512,7 @@
        id="g778"
        transform="translate(84.137505)"
        style="opacity:1"><rect
-         style="fill:#e2efd9;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1;fill-opacity:1"
+         style="fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect772"
          width="36.442169"
          height="25.931337"
@@ -563,9 +564,9 @@
          y="0"><tspan
            x="140.95746"
            y="129.33234"
-           id="tspan51044"><tspan
+           id="tspan15141"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51042">[ icis-eicis ]</tspan></tspan></text><text
+             id="tspan15139">[ icis-eicis ]</tspan></tspan></text><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,10.846491,6.1851495)"
          id="text17329-8"
@@ -574,19 +575,19 @@
          y="0"><tspan
            x="128.25586"
            y="124.46661"
-           id="tspan51048"><tspan
+           id="tspan15145"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51046">Oracle REST
+             id="tspan15143">Oracle REST
 </tspan></tspan><tspan
            x="128.25586"
            y="134.46661"
-           id="tspan51052"><tspan
+           id="tspan15149"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51050">Data Services</tspan></tspan></text></g><g
+             id="tspan15147">Data Services</tspan></tspan></text></g><g
        id="g788"
        transform="translate(126.47086)"
        style="opacity:1"><rect
-         style="fill:#e2efd9;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1;fill-opacity:1"
+         style="fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect782"
          width="27.245193"
          height="25.862186"
@@ -644,9 +645,9 @@
          y="0"><tspan
            x="128.72767"
            y="129.33234"
-           id="tspan51056"><tspan
+           id="tspan15153"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51054">[ msg-cor-life ]</tspan></tspan></text><g
+             id="tspan15151">[ msg-cor-life ]</tspan></tspan></text><g
          transform="matrix(0.0174625,0,0,0.0174625,42.55503,40.49112)"
          id="layer1-3"><title
            id="title22392">msg_logo</title><path
@@ -662,19 +663,19 @@
          style="font-size:8px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect22382);display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#008b82;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="637.67969"
            y="197.78497"
-           id="tspan51060"><tspan
+           id="tspan15157"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51058">Cor Life
+             id="tspan15155">Cor Life
 </tspan></tspan><tspan
            x="637.67969"
            y="207.78497"
-           id="tspan51064"><tspan
+           id="tspan15161"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51062">Application</tspan></tspan></text></g><g
+             id="tspan15159">Application</tspan></tspan></text></g><g
        id="g798"
        transform="translate(161.3959)"
        style="opacity:1"><rect
-         style="fill:#e2efd9;stroke:#c3c3c3;stroke-width:0.264583;fill-opacity:1;stroke-opacity:1"
+         style="fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect792"
          width="36.442169"
          height="25.931337"
@@ -737,31 +738,31 @@
          y="0"><tspan
            x="129.01026"
            y="129.33234"
-           id="tspan51068"><tspan
+           id="tspan15165"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51066">[ webservice-kfz * ]</tspan></tspan></text><text
+             id="tspan15163">[ webservice-kfz * ]</tspan></tspan></text><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-161.0204,0)"
          id="text2184"
          style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;white-space:pre;shape-inside:url(#rect2186);display:inline;fill:#008c82;fill-opacity:1"><tspan
            x="800.23242"
            y="164.62804"
-           id="tspan51072"><tspan
+           id="tspan15169"><tspan
              style="fill:#000000"
-             id="tspan51070">httpd</tspan></tspan></text><text
+             id="tspan15167">httpd</tspan></tspan></text><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-160.85947,9.6020586)"
          id="text2194"
          style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;white-space:pre;shape-inside:url(#rect2196);display:inline;fill:#008c82;fill-opacity:1"><tspan
            x="800.23242"
            y="164.62804"
-           id="tspan51076"><tspan
+           id="tspan15173"><tspan
              style="fill:#000000"
-             id="tspan51074">Tomcat</tspan></tspan></text></g><g
+             id="tspan15171">Tomcat</tspan></tspan></text></g><g
        id="g808"
        transform="translate(201.08344)"
        style="opacity:1"><rect
-         style="fill:#e2efd9;stroke:#c7c9c6;stroke-width:0.264583;stroke-opacity:1;fill-opacity:1"
+         style="fill:#e2efd9;fill-opacity:1;stroke:#c7c9c6;stroke-width:0.264583;stroke-opacity:1"
          id="rect802"
          width="36.64962"
          height="25.931337"
@@ -778,9 +779,9 @@
          y="0"><tspan
            x="139.11375"
            y="129.33234"
-           id="tspan51080"><tspan
+           id="tspan15177"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51078">[ apex-aman * ]</tspan></tspan></text><text
+             id="tspan15175">[ apex-aman * ]</tspan></tspan></text><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,24.176937,7.5689957)"
          id="text17329"
@@ -789,27 +790,27 @@
          y="0"><tspan
            x="128.25586"
            y="124.46661"
-           id="tspan51084"><tspan
+           id="tspan15181"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51082">Oracle
+             id="tspan15179">Oracle
 </tspan></tspan><tspan
            x="128.25586"
            y="134.46661"
-           id="tspan51088"><tspan
+           id="tspan15185"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51086">REST
+             id="tspan15183">REST
 </tspan></tspan><tspan
            x="128.25586"
            y="144.46661"
-           id="tspan51092"><tspan
+           id="tspan15189"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51090">Data
+             id="tspan15187">Data
 </tspan></tspan><tspan
            x="128.25586"
            y="154.46661"
-           id="tspan51096"><tspan
+           id="tspan15193"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51094">Services</tspan></tspan></text><g
+             id="tspan15191">Services</tspan></tspan></text><g
          id="g23598"><rect
            style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.499999;stroke-dasharray:none;stroke-opacity:1"
            id="rect23574"
@@ -822,223 +823,7 @@
              width="10.133542"
              height="10.133542"
              preserveAspectRatio="none"
-             xlink:href="data:image/png;base64,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
-"
+             xlink:href="data:image/png;base64,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 "
              id="image23221"
              x="41.608932"
              y="37.788479"
@@ -1051,14 +836,14 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              y="0"><tspan
                x="906.54199"
                y="183.69708"
-               id="tspan51100"><tspan
+               id="tspan15197"><tspan
                  style="fill:#000000;stroke:none"
-                 id="tspan51098">Oracle Application </tspan></tspan><tspan
+                 id="tspan15195">Oracle Application </tspan></tspan><tspan
                x="927.08691"
                y="193.69708"
-               id="tspan51104"><tspan
+               id="tspan15201"><tspan
                  style="fill:#000000;stroke:none"
-                 id="tspan51102">Express</tspan></tspan></text></g></g></g><g
+                 id="tspan15199">Express</tspan></tspan></text></g></g></g><g
        id="g27676"
        transform="translate(23.718362,40.00922)"><title
          id="title27664">db_cor_life</title><g
@@ -1089,9 +874,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect27678);display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.00157;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="580.14131"
            y="348.13703"
-           id="tspan51108"><tspan
+           id="tspan15205"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51106">SAP</tspan></tspan></text></g><g
+             id="tspan15203">SAP</tspan></tspan></text></g><g
        id="g28485"
        style="display:inline;opacity:1"
        transform="translate(-33.866667,40.00922)"><text
@@ -1101,9 +886,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect25249);display:inline;opacity:1;fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="38.550185"
            y="356.63117"
-           id="tspan51112"><tspan
+           id="tspan15209"><tspan
              style="fill:#000000;stroke:none"
-             id="tspan51110">Extern</tspan></tspan></text><rect
+             id="tspan15207">Extern</tspan></tspan></text><rect
          style="fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect812"
          width="34.644264"
@@ -1137,19 +922,19 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          y="0"><tspan
            x="134.51378"
            y="129.33234"
-           id="tspan51116"><tspan
+           id="tspan15213"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51114">[ sip-server ]
+             id="tspan15211">[ sip-server ]
 </tspan></tspan><tspan
            x="143.10426"
            y="145.99897"
-           id="tspan51120"><tspan
+           id="tspan15217"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51118">(Telefonie)</tspan></tspan></text></g><g
+             id="tspan15215">(Telefonie)</tspan></tspan></text></g><g
        id="g838"
        transform="translate(-6.879166,103.18749)"
        style="opacity:1"><rect
-         style="display:inline;fill:#e2efd9;stroke:#c3c3c3;stroke-width:0.264583;fill-opacity:1;stroke-opacity:1"
+         style="display:inline;fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect832"
          width="41.107647"
          height="23.839268"
@@ -1164,11 +949,11 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          style="font-size:8px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect7079);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"><tspan
            x="115.79297"
            y="576.89435"
-           id="tspan51122">Imagemaster
+           id="tspan15219">Imagemaster
 </tspan><tspan
            x="115.79297"
            y="586.89435"
-           id="tspan51124">Middleware</tspan></text><g
+           id="tspan15221">Middleware</tspan></text><g
          id="g13810"
          transform="translate(-6.8848069,-103.18749)"><rect
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
@@ -1229,16 +1014,16 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          y="0"><tspan
            x="129.36118"
            y="129.33234"
-           id="tspan51128"><tspan
+           id="tspan15225"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51126">[ imagemaster-dms ]</tspan></tspan></text></g><path
+             id="tspan15223">[ imagemaster-dms ]</tspan></tspan></text></g><path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart)"
        d="M 90.892989,57.342677 V 134.14257"
        id="path34996" /><g
        id="g848"
        transform="translate(36.512503,103.18749)"
        style="opacity:1"><rect
-         style="fill:#e2efd9;stroke:#c3c3c3;stroke-width:0.264583;fill-opacity:1;stroke-opacity:1"
+         style="fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect842"
          width="40.517586"
          height="24.053841"
@@ -1253,7 +1038,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          style="font-size:8px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect6133);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"><tspan
            x="273.98438"
            y="587.96271"
-           id="tspan51130">Icis Navicontroller</tspan></text><text
+           id="tspan15227">Icis Navicontroller</tspan></text><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,1.5692579,1.5875007)"
          id="text846"
@@ -1262,9 +1047,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          y="0"><tspan
            x="129.69516"
            y="129.33234"
-           id="tspan51134"><tspan
+           id="tspan15231"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51132">[ icis-navicontroller ]</tspan></tspan></text><g
+             id="tspan15229">[ icis-navicontroller ]</tspan></tspan></text><g
          id="g13810-2"
          transform="translate(1.1083344,-102.94257)"><rect
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
@@ -1299,7 +1084,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              id="path46874"
              style="display:inline;opacity:1;fill:#0d867b;fill-opacity:1;stroke-width:0.361683" /></g></g></g><g
        id="g28469"><rect
-         style="display:inline;opacity:1;fill:#e2efd9;stroke:#c3c3c3;stroke-width:0.264583;fill-opacity:1;stroke-opacity:1"
+         style="display:inline;opacity:1;fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect822"
          width="108.58849"
          height="39.484787"
@@ -1331,18 +1116,18 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            y="0"><tspan
              x="165.72953"
              y="129.33234"
-             id="tspan51138"><tspan
+             id="tspan15235"><tspan
                style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-               id="tspan51136">DSS</tspan></tspan></text><text
+               id="tspan15233">DSS</tspan></tspan></text><text
            xml:space="preserve"
            transform="matrix(0.26458333,0,0,0.26458333,32.920227,-40.00922)"
            id="text29386"
            style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect29390);display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.00157;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="580.2292"
              y="348.13703"
-             id="tspan51142"><tspan
+             id="tspan15239"><tspan
                style="fill:#000000;stroke:none"
-               id="tspan51140">MIS</tspan></tspan></text></g><text
+               id="tspan15237">MIS</tspan></tspan></text></g><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,66.68227,80.118758)"
          id="text29394"
@@ -1351,9 +1136,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          y="0"><tspan
            x="144.4568"
            y="129.33234"
-           id="tspan51146"><tspan
+           id="tspan15243"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51144">PRODUKTI</tspan></tspan></text><g
+             id="tspan15241">PRODUKTI</tspan></tspan></text><g
          id="g29436"><g
            id="g28803"
            transform="translate(-54.895046,40.00922)"><path
@@ -1373,9 +1158,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect28811);display:inline;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.00157;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="574.41541"
              y="348.13703"
-             id="tspan51150"><tspan
+             id="tspan15247"><tspan
                style="fill:#000000;stroke:none"
-               id="tspan51148">eICIS</tspan></tspan></text><text
+               id="tspan15245">eICIS</tspan></tspan></text><text
            xml:space="preserve"
            transform="matrix(0.26458333,0,0,0.26458333,87.84895,80.118758)"
            id="text29400"
@@ -1384,9 +1169,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            y="0"><tspan
              x="160.13384"
              y="129.33234"
-             id="tspan51154"><tspan
+             id="tspan15251"><tspan
                style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-               id="tspan51152">WWW</tspan></tspan></text></g><g
+               id="tspan15249">WWW</tspan></tspan></text></g><g
          id="g29422"><g
            id="g27653"
            transform="translate(-33.866667,40.00922)"><path
@@ -1406,9 +1191,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect25418);display:inline;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.00157;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="567.46556"
              y="348.13703"
-             id="tspan51158"><tspan
+             id="tspan15255"><tspan
                style="fill:#000000;stroke:none"
-               id="tspan51156">Cor Life</tspan></tspan></text><text
+               id="tspan15253">Cor Life</tspan></tspan></text><text
            xml:space="preserve"
            transform="matrix(0.26458333,0,0,0.26458333,107.42817,80.118758)"
            id="text29406"
@@ -1417,9 +1202,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            y="0"><tspan
              x="165.37146"
              y="129.33234"
-             id="tspan51162"><tspan
+             id="tspan15259"><tspan
                style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-               id="tspan51160">COR</tspan></tspan></text></g><g
+               id="tspan15257">COR</tspan></tspan></text></g><g
          id="g32436"
          transform="translate(-24.246538,-23.17453)"><g
            id="g28803-8"
@@ -1440,7 +1225,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            transform="scale(0.26458333)"><tspan
              x="482.80804"
              y="435.9007"
-             id="tspan51164">ICIS /ICIS+</tspan></text><g
+             id="tspan15261">ICIS /ICIS+</tspan></text><g
            id="g1019"><g
              id="use29440"
              transform="matrix(0.10073803,0,0,0.10073804,130.36607,118.97627)"
@@ -1466,27 +1251,27 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              y="0"><tspan
                x="516.67578"
                y="453.37127"
-               id="tspan51168"><tspan
+               id="tspan15265"><tspan
                  style="text-align:start"
-                 id="tspan51166">Stored
+                 id="tspan15263">Stored
 </tspan></tspan><tspan
                x="516.67578"
                y="461.70461"
-               id="tspan51172"><tspan
+               id="tspan15269"><tspan
                  style="text-align:start"
-                 id="tspan51170">proc.
+                 id="tspan15267">proc.
 </tspan></tspan><tspan
                x="516.67578"
                y="470.03795"
-               id="tspan51176"><tspan
+               id="tspan15273"><tspan
                  style="text-align:start"
-                 id="tspan51174">with API -
+                 id="tspan15271">with API -
 </tspan></tspan><tspan
                x="516.67578"
                y="478.3713"
-               id="tspan51180"><tspan
+               id="tspan15277"><tspan
                  style="text-align:start"
-                 id="tspan51178">access</tspan></tspan></text></g></g></g><path
+                 id="tspan15275">access</tspan></tspan></text></g></g></g><path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleStart)"
        d="M 136.57272,87.918879 V 57.235997"
        id="path38363" /><g
@@ -1508,7 +1293,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;white-space:pre;shape-inside:url(#rect3331);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"><tspan
            x="454.14648"
            y="563.02062"
-           id="tspan51182">Jobs</tspan></text><text
+           id="tspan15279">Jobs</tspan></text><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,0.64371343,2.560332)"
          id="text856"
@@ -1517,27 +1302,27 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          y="0"><tspan
            x="141.34914"
            y="129.33234"
-           id="tspan51186"><tspan
+           id="tspan15283"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51184">[ icis-jobs, icis-print ]</tspan></tspan></text><text
+             id="tspan15281">[ icis-jobs, icis-print ]</tspan></tspan></text><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-80.421632,-96.857643)"
          id="text3388"
          style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;white-space:pre;shape-inside:url(#rect3390);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"><tspan
            x="454.14648"
            y="563.02062"
-           id="tspan51188">eVB, SNN,
+           id="tspan15285">eVB, SNN,
 </tspan><tspan
            x="454.14648"
            y="576.35399"
-           id="tspan51190">VWB, ...</tspan></text><text
+           id="tspan15287">VWB, ...</tspan></text><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-65.294367,-102.75835)"
          id="text3392"
          style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;white-space:pre;shape-inside:url(#rect3394);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"><tspan
            x="454.14648"
            y="563.02062"
-           id="tspan51192">Cups</tspan></text><g
+           id="tspan15289">Cups</tspan></text><g
          stroke="none"
          stroke-width="1"
          fill="none"
@@ -1574,7 +1359,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect657);display:inline;fill:#4572c3;fill-opacity:1"><tspan
                x="684.87695"
                y="525.00694"
-               id="tspan51194">Print</tspan></text></g><path
+               id="tspan15291">Print</tspan></text></g><path
            style="fill:none;fill-opacity:1;stroke:#4572c3;stroke-width:0.264583;stroke-opacity:1;marker-end:url(#marker5317)"
            d="M 70.493879,44.983755 H 81.70787 v -9.621094 h 6.530877"
            id="path1519" /></g><g
@@ -1600,7 +1385,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect1353);display:inline;fill:#4572c3;fill-opacity:1"><tspan
                x="684.87695"
                y="525.00694"
-               id="tspan51196">Fax</tspan></text></g><path
+               id="tspan15293">Fax</tspan></text></g><path
            style="fill:none;fill-opacity:1;stroke:#4572c3;stroke-width:0.264583;stroke-opacity:1;marker-end:url(#marker5317)"
            d="m 70.557593,44.983755 h 16.78913"
            id="path2501" /></g><g
@@ -1616,11 +1401,11 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect1459);display:inline;fill:#4572c3;fill-opacity:1"><tspan
                x="684.87695"
                y="525.00694"
-               id="tspan51198">PDF /
+               id="tspan15295">PDF /
 </tspan><tspan
                x="684.87695"
                y="538.34032"
-               id="tspan51200">E-Mail</tspan></text><g
+               id="tspan15297">E-Mail</tspan></text><g
              id="g28534"><title
                id="title28554">document_icon</title><g
                id="g28524"><path
@@ -1704,7 +1489,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect29481);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
                x="740.4124"
                y="629.83312"
-               id="tspan51202">PCL</tspan></text></g></g><g
+               id="tspan15299">PCL</tspan></text></g></g><g
          id="g29560"><path
            id="path24781"
            style="opacity:1;fill:none;stroke:#0d867b;stroke-width:0.3;stroke-opacity:1;marker-start:url(#TriangleStart)"
@@ -1716,14 +1501,14 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect29538);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="243.76963"
              y="632.3343"
-             id="tspan51204">WebService</tspan></text></g><text
+             id="tspan15301">WebService</tspan></text></g><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-85.331002,-102.87211)"
          id="text29562"
          style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect29564);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="234.00133"
            y="399.21711"
-           id="tspan51206">TCP</tspan></text><g
+           id="tspan15303">TCP</tspan></text><g
          id="g30943"
          transform="translate(100.19107,-0.81372748)"><g
            id="g38325"><rect
@@ -1739,13 +1524,13 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect30945);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
                x="413.93266"
                y="244.09015"
-               id="tspan51208">JDBC</tspan></text></g><path
+               id="tspan15305">JDBC</tspan></text></g><path
            style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart)"
            d="m 28.199504,-45.073237 v 13.776648 l -1.09697,1.09697 H 16.390949"
            id="path38316" /></g><g
          id="g36863"><path
            id="path28576"
-           style="opacity:1;fill:none;stroke:#00ff00;stroke-width:0.3;stroke-opacity:1;marker-end:url(#TriangleStart)"
+           style="opacity:1;fill:none;stroke:#008b82;stroke-width:0.3;stroke-opacity:1;marker-end:url(#TriangleStart)"
            d="m 161.78396,-46.0694 v 15.091915 H 72.306876 c 0,-0.734036 -0.59506,-1.329091 -1.32909,-1.329091 -0.73404,0 -1.329096,0.595054 -1.329096,1.329091 H 52.562472 c 0,-0.734036 -0.59506,-1.329091 -1.32909,-1.329091 -0.73404,0 -1.329096,0.595054 -1.329096,1.329091 l -19.416828,-0.01993 -1.727471,1.401749 v 14.529416"
            sodipodi:nodetypes="cccsccsc" /><g
            id="g30965"
@@ -1762,7 +1547,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect30967);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
                x="413.93266"
                y="244.09015"
-               id="tspan51210">JDBC</tspan></text></g></g><g
+               id="tspan15307">JDBC</tspan></text></g></g><g
          id="g31053"
          transform="translate(-63.571097,7.9070392)"
          inkscape:highlight-color="#b85ac9"
@@ -1786,14 +1571,14 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              inkscape:label="text31051"><tspan
                x="409.15534"
                y="244.09015"
-               id="tspan51212">SQL-Net</tspan></text></g></g><text
+               id="tspan15309">SQL-Net</tspan></text></g></g><text
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,-85.50099,-102.57719)"
          id="text31916"
          style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect31918);display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="784.15858"
            y="418.90265"
-           id="tspan51214">Extern</tspan></text><g
+           id="tspan15311">Extern</tspan></text><g
          id="g38310"
          style="display:inline"><path
            id="path38302"
@@ -1815,7 +1600,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
              style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect30799);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
                x="413.93266"
                y="244.09015"
-               id="tspan51216">JDBC</tspan></text></g></g></g><g
+               id="tspan15313">JDBC</tspan></text></g></g></g><g
        id="g33270"
        style="display:inline;opacity:1"
        transform="translate(85.195841,103.18749)"><text
@@ -1825,11 +1610,13 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect29588);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="231.32141"
            y="399.21711"
-           id="tspan51218">JDBC/SQL-Net</tspan></text><path
+           id="tspan15315">JDBC/SQL-Net</tspan></text><path
          style="opacity:1;fill:none;fill-opacity:1;stroke:#5b80c4;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
          d="M 58.275739,30.468417 V 19.940726 l -1.213298,-1.74914 c 0,0 -25.733932,-0.210002 -26.097668,0 -0.363736,0.210003 -2.03975,-1.177649 -2.03975,-1.177649 V 4.6832024"
          id="path32548"
-         sodipodi:nodetypes="cccscc" /></g><g
+         sodipodi:nodetypes="cccscc"
+         inkscape:label="path32548"
+         inkscape:highlight-color="#005ac9" /></g><g
        id="g868"
        transform="translate(174.09585,118.00416)"
        style="opacity:1"><rect
@@ -1850,9 +1637,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          y="0"><tspan
            x="150.61216"
            y="129.33234"
-           id="tspan51222"><tspan
+           id="tspan15319"><tspan
              style="text-align:center;text-anchor:middle;stroke:none"
-             id="tspan51220">[ Druckhaus extern ]</tspan></tspan></text></g><g
+             id="tspan15317">[ Druckhaus extern ]</tspan></tspan></text></g><g
        id="g17091"
        transform="translate(174.09585,144.99175)"
        style="opacity:1"><rect
@@ -1873,9 +1660,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          y="0"><tspan
            x="131.16954"
            y="129.33234"
-           id="tspan51226"><tspan
+           id="tspan15323"><tspan
              style="text-align:center;text-anchor:middle;stroke:none"
-             id="tspan51224">[ MQSerires GDV Schnittstelle ]</tspan></tspan></text></g><g
+             id="tspan15321">[ MQSerires GDV Schnittstelle ]</tspan></tspan></text></g><g
        id="g17890"
        transform="matrix(0.07731019,0,0,0.07731019,237.55075,48.532366)"><title
          id="title24942">ords_logo</title><path
@@ -1912,7 +1699,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          id="path17741"
          sodipodi:nodetypes="cccccccc" /></g><g
        id="g22034"><rect
-         style="fill:#e2efd9;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1;fill-opacity:1"
+         style="fill:#e2efd9;fill-opacity:1;stroke:#c3c3c3;stroke-width:0.264583;stroke-opacity:1"
          id="rect354"
          width="27.106888"
          height="25.931337"
@@ -1928,9 +1715,9 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          y="0"><tspan
            x="136.34158"
            y="129.33234"
-           id="tspan51230"><tspan
+           id="tspan15327"><tspan
              style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-             id="tspan51228">[ icis-forms ]</tspan></tspan></text><g
+             id="tspan15325">[ icis-forms ]</tspan></tspan></text><g
          id="g22023"><g
            id="g21200-1"
            transform="matrix(0.31910091,0,0,0.31910091,23.409891,48.357075)"><rect
@@ -1955,15 +1742,15 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            y="0"><tspan
              x="166.93652"
              y="179.90802"
-             id="tspan51234"><tspan
+             id="tspan15331"><tspan
                style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-               id="tspan51232">+
+               id="tspan15329">+
 </tspan></tspan><tspan
              x="157.89941"
              y="189.90802"
-             id="tspan51238"><tspan
+             id="tspan15335"><tspan
                style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
-               id="tspan51236">Forms</tspan></tspan></text></g></g><g
+               id="tspan15333">Forms</tspan></tspan></text></g></g><g
        id="g29503"><path
          style="opacity:1;fill:none;fill-opacity:1;stroke:#4572c3;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
          d="m 180.24947,170.56288 0.4415,-1.6477 h 17.24237 v -13.44847 h 9.49366"
@@ -1974,16 +1761,19 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect29137);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="738.26403"
            y="632.26594"
-           id="tspan51240">FTP</tspan></text></g><path
+           id="tspan15337">FTP</tspan></text></g><path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
        d="m 90.912764,117.45296 v 16.6146"
        id="path33336" /><path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
-       d="m 60.301969,56.964328 5.89441,0 v 73.075452 h 24.716385 l 0.01873,4.33446"
+       d="m 60.301969,56.964328 h 5.89441 v 73.075452 h 24.716385 l 0.01873,4.33446"
        id="path33525"
        sodipodi:nodetypes="ccccc" /><g
        id="g33672"
-       inkscape:highlight-color="#b85ac9"><g
+       inkscape:highlight-color="#b85ac9"><path
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
+         d="m 173.95775,57.25038 v 11.869213 l -17.93755,0.143851 v 18.8571"
+         id="path33625" /><g
          id="g42624"><rect
            style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
            id="rect30813"
@@ -1998,10 +1788,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect30821);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="413.93266"
              y="244.09015"
-             id="tspan51242">JDBC</tspan></text></g><path
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleStart)"
-         d="m 173.95775,57.25038 v 11.869213 l -17.93755,0.143851 v 18.8571"
-         id="path33625" /></g><g
+             id="tspan15339">JDBC</tspan></text></g></g><g
        id="g34514"
        style="display:inline"><path
          style="fill:none;fill-opacity:1;stroke:#04ad51;stroke-width:0.3;stroke-dasharray:1.2, 0.3;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart)"
@@ -2022,7 +1809,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect31836);display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="415.58555"
              y="241.65734"
-             id="tspan51244">DB-Link</tspan></text></g></g><g
+             id="tspan15341">DB-Link</tspan></text></g></g><g
        id="g38410"><path
          style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          d="M 114.1426,88.120544 V 53.384661 l -1.21495,-1.43437 h -1.17972"
@@ -2042,7 +1829,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect30328);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="413.93266"
              y="244.09015"
-             id="tspan51246">JDBC</tspan></text></g></g><g
+             id="tspan15343">JDBC</tspan></text></g></g><g
        id="g34713"
        style="display:inline"><path
          id="path34631"
@@ -2064,7 +1851,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect31902);display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="415.58555"
              y="241.65734"
-             id="tspan51248">DB-Link</tspan></text></g></g><g
+             id="tspan15345">DB-Link</tspan></text></g></g><g
        id="g34744"
        style="display:inline"
        transform="translate(25.267708,28.575)"><path
@@ -2087,12 +1874,12 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect34746);display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="415.58555"
              y="241.65734"
-             id="tspan51250">DB-Link</tspan></text></g></g><g
+             id="tspan15347">DB-Link</tspan></text></g></g><g
        id="g34784"
        style="display:inline"
        transform="translate(45.753917,3.4583461)"><path
          style="fill:none;fill-opacity:1;stroke:#04ad51;stroke-width:0.3;stroke-dasharray:1.2, 0.3;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart)"
-         d="m 93.746369,84.94175 0,-3.810738 h 14.380591 l 0,3.538937"
+         d="m 93.746369,84.94175 v -3.810738 h 14.380591 v 3.538937"
          id="path34774"
          sodipodi:nodetypes="cccc" /><g
          id="g34782"
@@ -2110,7 +1897,7 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:10.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect34786);display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="415.58555"
              y="241.65734"
-             id="tspan51252">DB-Link</tspan></text></g></g><g
+             id="tspan15349">DB-Link</tspan></text></g></g><g
        id="g36743"><g
          id="g31940"
          transform="translate(-2.482144,149.84864)"
@@ -2121,16 +1908,16 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect31942);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="418.07498"
              y="244.09015"
-             id="tspan51254">Web-Service
+             id="tspan15351">Web-Service
 </tspan><tspan
              x="408.02292"
              y="260.75678"
-             id="tspan51256">(GetDocument)</tspan></text></g><path
+             id="tspan15353">(GetDocument)</tspan></text></g><path
          style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart)"
          d="M 41.907862,57.249133 V 133.7684"
          id="path36698" /></g><g
        id="g36830"><path
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleStart);marker-start:url(#TriangleStart)"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#008b82;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart)"
          d="M 33.932812,44.185416 H 14.089062 V 70.709895"
          id="path36749"
          sodipodi:nodetypes="ccc"
@@ -2147,10 +1934,10 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
          style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect30989);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
            x="416.5238"
            y="244.09015"
-           id="tspan51258">Java</tspan></text></g><g
+           id="tspan15355">Java</tspan></text></g><g
        id="g38765"><path
          id="path38769"
-         style="opacity:1;fill:none;stroke:#008b82;stroke-width:0.262797;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart);stroke-opacity:1"
+         style="opacity:1;fill:none;stroke:#008b82;stroke-width:0.262797;stroke-opacity:1;marker-start:url(#TriangleStart);marker-end:url(#TriangleStart)"
          d="m 14.12184,70.905782 v -8.897434 h 26.650918 c 0,-0.728462 0.590535,-1.318997 1.318997,-1.318997 0.728462,0 1.318997,0.590535 1.318997,1.318997 h 2.928612 c 0,-0.728462 0.590535,-1.318997 1.318997,-1.318997 0.728462,0 1.318997,0.590535 1.318997,1.318997 h 15.750056 c 0,-0.728462 0.590535,-1.318997 1.318997,-1.318997 0.728462,0 1.318997,0.590535 1.318997,1.318997 h 8.057538 v -4.768127"
          sodipodi:nodetypes="ccccccsccsccc" /><g
          id="g31031"
@@ -2168,11 +1955,14 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            style="font-size:13.3333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect31033);display:inline;opacity:1;fill:#4572c3;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-opacity:1"><tspan
              x="416.5238"
              y="244.09015"
-             id="tspan51260">Java</tspan></text></g></g><path
+             id="tspan15357">Java</tspan></text></g></g><path
        id="path46263"
        style="opacity:1;fill:none;stroke:#008b82;stroke-width:0.3388;stroke-opacity:1"
-       d="m 81.710172,57.113415 v 19.574383 l -14.545614,-3e-6 c 0.0064,-0.682733 -0.547067,-1.236196 -1.229797,-1.236196 -0.68273,0 -1.236193,0.553463 -1.236193,1.236193 l -21.353822,0 -1.267374,1.267374 0,55.949134"
-       sodipodi:nodetypes="cccsc" /></g><g
+       d="m 81.710172,57.113415 v 19.574383 l -14.545614,-3e-6 c 0.0064,-0.682733 -0.547067,-1.236196 -1.229797,-1.236196 -0.68273,0 -1.236193,0.553463 -1.236193,1.236193 H 43.344746 l -1.267374,1.267374 V 133.9043"
+       sodipodi:nodetypes="cccsc" /><path
+       style="fill:none;stroke:#4572c3;stroke-width:0.3;stroke-opacity:1;marker-end:url(#marker5317)"
+       d="m 132.51342,160.07209 v 20.86217 l 74.8205,0.25756"
+       id="path7299" /></g><g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="diagram_metadata"><g
@@ -2188,41 +1978,41 @@ mz77N6kAopZAlkVAMZC8gdcN/pAI49J0+AeZCL8Ns/+s
            xml:space="preserve"
            transform="matrix(0.26458333,0,0,0.26458333,0.73726687,13.093509)"
            id="text932"
-           style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect934);fill:#000000;stroke:none"><tspan
+           style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect934);display:inline;fill:#000000;stroke:none"><tspan
              x="4.625"
              y="31.547573"
-             id="tspan51262">Fatih Acikgöz,
+             id="tspan15359">Fatih Acikgöz,
 </tspan><tspan
              x="4.625"
              y="46.547573"
-             id="tspan51264">05.05.2022</tspan></text><text
+             id="tspan15361">05.05.2022</tspan></text><text
            xml:space="preserve"
            transform="matrix(0.26458333,0,0,0.26458333,0.63959831,0.46243532)"
            id="text772"
-           style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect774);fill:#000000;stroke:none"><tspan
+           style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect774);display:inline;fill:#000000;stroke:none"><tspan
              x="4.625"
              y="31.547573"
-             id="tspan51266">Architektur-
+             id="tspan15363">Architektur-
 </tspan><tspan
              x="4.625"
              y="46.547573"
-             id="tspan51268">Schaubild
+             id="tspan15365">Schaubild
 </tspan><tspan
              x="4.625"
              y="61.547573"
-             id="tspan51270">Gesamt-ICIS</tspan></text><text
+             id="tspan15367">Gesamt-ICIS</tspan></text><text
            xml:space="preserve"
            transform="matrix(0.26458333,0,0,0.26458333,0.77137321,-4.7923445)"
            id="text936"
-           style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect938);fill:#000000;stroke:none"><tspan
+           style="font-size:12px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect938);display:inline;fill:#000000;stroke:none"><tspan
              x="4.625"
              y="31.547573"
-             id="tspan51272">Quelle:</tspan></text></g></g><text
+             id="tspan15369">Quelle:</tspan></text></g></g><text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,-13.659058,4.3708987)"
        id="text50219"
-       style="font-size:34.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;shape-inside:url(#rect50221)"
+       style="font-size:34.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect50221);display:inline;opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1.13386;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:label="text50219"><tspan
          x="313.33077"
          y="47.459511"
-         id="tspan51274">Architektur-Schaubild ICIS-Gesamt</tspan></text></g></svg>
+         id="tspan15371">Architektur-Schaubild ICIS-Gesamt</tspan></text></g></svg>

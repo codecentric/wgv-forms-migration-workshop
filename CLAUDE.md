@@ -145,14 +145,28 @@ These frameworks help us facilitate structured discussions and decision-making p
 
 ### Available Diagrams
 
-1. **`icis_oracle_forms_architektur.svg`**: Detailed Oracle Forms 3-tier architecture diagram showing UI Presentation, Application Logic, Data Manager, and PL/SQL Engine layers
-2. **`architektur_schaubild_icis_gesamt.svg`**: Complete ICIS system architecture showing all components (ICIS+, Forms, APEX), external integrations (SAP, COR Life, GDV, DMS), and middleware
+**Conceptual Reference**:
+1. **`tier_architecture.svg`**: Generic 3-tier architecture pattern (Client-Middle-Database) in Oracle Forms context - conceptual reference without metadata, useful for understanding architectural principles
+
+**ICIS-Specific Architectures**:
+2. **`icis_oracle_forms_architektur.svg`**: Detailed Oracle Forms 3-tier architecture diagram showing UI Presentation, Application Logic, Data Manager, and PL/SQL Engine layers
+3. **`architektur_schaubild_icis_gesamt.svg`**: Complete ICIS system architecture showing all components (ICIS+, Forms, APEX), external integrations (SAP, COR Life, GDV, DMS), and middleware (dated May 2022, most recent overview)
+4. **`icis_plus_jee_architekture.svg`**: ICIS+ JEE architecture showing Vaadin/Sencha UI, Spring-based service layer, backend adapters (icis-anbindung, odsp-anbindung, fe-generierungs-anbindung, csipjax-persistent), and dual-database architecture (dated Feb 2021, ICIS Legacy + ICIS+ Modern)
 
 ### Technical Reference Documents
 
-Technical reference documents explain concepts, technologies, and best practices relevant to the WGV ICIS modernization project:
+Technical reference documents and architecture interpretations explain concepts, technologies, and best practices relevant to the WGV ICIS modernization project:
 
-1. **`plsql_functions_vs_procedures.md`**: Oracle PL/SQL fundamentals - differences between functions and procedures (language specification vs. best practices), RETURN vs. OUT parameters, integration layer examples
+**Conceptual Architecture References:**
+1. **`tier_architecture.md`**: Generic 3-tier architecture pattern explanation (conceptual, no metadata) - useful for understanding architectural principles before diving into ICIS-specific implementations
+
+**ICIS-Specific Architecture Interpretations:**
+2. **`icis_oracle_forms_architektur.md`**: Interpretation of ICIS-Klassik Oracle Forms 3-tier architecture
+3. **`architektur_schaubild_icis_gesamt.md`**: Interpretation of complete ICIS system architecture (May 2022, most recent)
+4. **`icis_plus_jee_architekture.md`**: Interpretation of ICIS+ JEE architecture (Feb 2021, Vaadin, Spring, dual-database)
+
+**Technical References:**
+5. **`plsql_functions_vs_procedures.md`**: Oracle PL/SQL fundamentals - differences between functions and procedures (language specification vs. best practices), RETURN vs. OUT parameters, integration layer examples
 
 ### Convention: Separating Visual and Textual Documentation
 

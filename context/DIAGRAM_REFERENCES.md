@@ -4,10 +4,12 @@ Diese Datei dokumentiert die Zuordnung zwischen Diagramm-Dateien (`.svg`) und ih
 
 ## Referenz-Tabelle
 
-| Markdown Interpretation | SVG Diagramm |
-|------------------------|--------------|
-| `context/icis_oracle_forms_architektur.md` | `diagrams/icis_oracle_forms_architektur.svg` |
-| `context/architektur_schaubild_icis_gesamt.md` | `diagrams/architektur_schaubild_icis_gesamt.svg` |
+| Markdown Interpretation | SVG Diagramm | Typ |
+|------------------------|--------------|-----|
+| `context/tier_architecture.md` | `diagrams/tier_architecture.svg` | Konzeptionell |
+| `context/icis_oracle_forms_architektur.md` | `diagrams/icis_oracle_forms_architektur.svg` | ICIS-spezifisch |
+| `context/architektur_schaubild_icis_gesamt.md` | `diagrams/architektur_schaubild_icis_gesamt.svg` | ICIS-spezifisch (Gesamt) |
+| `context/icis_plus_jee_architekture.md` | `diagrams/icis_plus_jee_architekture.svg` | ICIS-spezifisch (ICIS+) |
 
 ---
 
