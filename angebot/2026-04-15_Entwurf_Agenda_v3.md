@@ -71,3 +71,21 @@ Hier gibt es einen kurzen Exkurs zum Thema Frontend Frameworks, der Großteil wi
 **Personenkreis für Tag 3:** Developer, Architekten (für den Frontend Teil am Anfang und länger, wenn sie AI-Driven Development lernen wollen)
 
 Teilnehmer in Klammern sind optional, wir überlassen Ihnen die Entscheidung, ob sie es für sinnvoll erachten, bzw. bei Ihnen passt.
+
+---
+
+## Workshop-Referenzmaterialien
+
+### Technische Referenzen
+- **Oracle Forms Migration Options**: [/context/oracle_forms_migration_options_reference.md](../context/oracle_forms_migration_options_reference.md) - Vergleich von APEX, Java und .NET Migrationsansätzen
+- **Risikobewertung**: [/context/migration_risk_assessment.md](../context/migration_risk_assessment.md) - Top 10 Risiken mit Mitigation-Strategien
+
+### Architektur-Dokumentation
+- **ICIS Gesamtarchitektur**: [/context/architektur_schaubild_icis_gesamt.md](../context/architektur_schaubild_icis_gesamt.md)
+- **Oracle Forms Architektur**: [/context/icis_oracle_forms_architektur.md](../context/icis_oracle_forms_architektur.md)
+- **ICIS+ JEE Architektur**: [/context/icis_plus_jee_architekture.md](../context/icis_plus_jee_architekture.md)
+
+### Facilitation-Methoden
+- **Entscheidungsframeworks**: [/facilitation/decision_frameworks.md](../facilitation/decision_frameworks.md)
+- **Tag 1 Domain Mapping**: [/facilitation/tag1_domain_mapping_guide.md](../facilitation/tag1_domain_mapping_guide.md)
+- **Tag 1 ICIS Deep Dive**: [/facilitation/tag1_icis_deep_dive_guide.md](../facilitation/tag1_icis_deep_dive_guide.md)
