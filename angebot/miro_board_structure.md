@@ -181,6 +181,22 @@
 │  • Team-Ownership (wer ist verantwortlich)                 │
 │  • Externe Integrationen (wer nutzt welches System)        │
 │                                                             │
+├─────────────────────────────────────────────────────────────┤
+│  INFORMATION ARCHITECTURE (HIGH-LEVEL):                     │
+│                                                             │
+│  CORE ENTITIES & BEZIEHUNGEN:                               │
+│  ┌──────────┐                                               │
+│  │  KUNDE   │ (Master: Partner Context)                     │
+│  └────┬─────┘                                               │
+│       │                                                     │
+│       ├─→ VERTRAG (Master: Vertrag Context, 1:N)           │
+│       │   └─→ SCHADEN (Master: Schaden Context, 1:M)       │
+│       │                                                     │
+│       └─→ PARTNER (Master: Partner Context, M:N)           │
+│                                                             │
+│  SHARED DATA (über alle Contexts):                          │
+│  • ADRESSE, BANKVERBINDUNG, DOKUMENT, PRODUKTKATALOG        │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -191,19 +207,22 @@
 - Arrows/connections between contexts
 - Color coding: Core domains (orange), Supporting (blue), Generic (gray)
 - Criteria checklist at bottom (helps guide discussion)
+- **Information Architecture Diagramm**: Entity boxes with relationship arrows, Shared Data highlighted
 
 **Facilitator Input:**
 - Use `/facilitation/tag1_domain_mapping_guide.md` to guide discussion
-- **NEW**: Use `/facilitation/bounded_context_discovery_questionnaire.md` as structured interview guide
+- **Use `/facilitation/bounded_context_discovery_questionnaire.md` as structured interview guide**
+  - **Kategorie 2.2 (Information Architecture)**: Dokumentiere Core Entities, Beziehungen, Shared Data
 - Activity: Event Storming Light (~45-60min)
 - Activity: Context Mapping (~30-45min)
 - Activity: Bounded Context Discovery (~60-90min)
+  - **Inkludiert: Information Architecture Mapping (~15-20min innerhalb Kategorie 2)**
 - **Note:** These sub-activities are included within the total time below
 
 **Key Insight to Communicate:**
-The architecture diagrams (`architektur_schaubild_icis_gesamt.svg`, `icis_oracle_forms_architektur.svg`) show **technical structure**, not business domain boundaries. The ~900 icis-forms masks are one monolithic technical component that likely spans multiple bounded contexts. We need WGV's domain expertise to discover these boundaries.
+The architecture diagrams (`architektur_schaubild_icis_gesamt.svg`, `icis_oracle_forms_architektur.svg`) show **technical structure**, not business domain boundaries. The ~900 icis-forms masks are one monolithic technical component that likely spans multiple bounded contexts. We need WGV's domain expertise to discover these boundaries. **Information Architecture** (Entity-Beziehungen) hilft, sowohl fachliche als auch technische System-Grenzen zu verstehen.
 
-**Time:** ~2 hours (120 min) - aligned with committed agenda "Domäne erkennen & ICIS-System Verständnis"
+**Time:** ~2.5 hours (150 min) - aligned with committed agenda "Domäne erkennen & ICIS-System Verständnis" (2h) + vollständiger ICIS Deep Dive aus Facilitation Guide
 
 ---
 
@@ -249,45 +268,57 @@ MVP Priority: 1=höchste Priorität für MVP
 
 ---
 
-### **Frame 5: UI/UX Patterns Comparison (INPUT + CAPTURE)**
+### **Frame 5: UI/UX Transformation Approach (INPUT)**
 
-**Purpose:** Compare UI patterns for different user types
+**Purpose:** codecentric präsentiert Approach für UX/UI Transformation (Methodologie-Präsentation, nicht kollaborative Session)
+
+**Note:** WGV PM Feedback: UX/UI als "approach presentation", Fokus auf technische Machbarkeit. Keine ausführliche kollaborative UX-Session.
 
 **Layout:**
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  UI/UX PATTERNS - WELCHE PASST WO?                          │
-├───────────────────┬─────────────────────────────────────────┤
-│  PATTERN          │  GEEIGNET FÜR                           │
-├───────────────────┼─────────────────────────────────────────┤
-│ 📝 TRADITIONELLE  │ • Power User (Sachbearbeiter)           │
-│    FORMS          │ • Hohe Datendichte                      │
-│                   │ • Keyboard-Navigation                   │
-│ [Mockup/Skizze]   │ • Komplexe Validierung                  │
-│                   │ WGV Beispiele: [sticky notes]           │
-├───────────────────┼─────────────────────────────────────────┤
-│ 💬 CONVERSATIONAL │ • Gelegentliche Nutzer                  │
-│    UI             │ • Einfache Abfragen                     │
-│                   │ • Geführte Prozesse                     │
-│ [Mockup/Skizze]   │ • Self-Service                          │
-│                   │ WGV Beispiele: [sticky notes]           │
-├───────────────────┼─────────────────────────────────────────┤
-│ 🔀 HYBRID         │ • Beide Usertypen                       │
-│    (Forms + Chat) │ • Kontextsensitiv                       │
-│                   │ • AI-Assistenz in Forms eingebettet     │
-│ [Mockup/Skizze]   │ WGV Beispiele: [sticky notes]           │
-└───────────────────┴─────────────────────────────────────────┘
-
-WGV ENTSCHEIDUNG:
-[Large sticky note area for decision + rationale]
+│  CODECENTRIC APPROACH: UI/UX TRANSFORMATION                 │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  METHODOLOGIE:                                              │
+│  1. User Research & Journey Mapping                         │
+│  2. Information Architecture                                │
+│  3. Pattern Library Entwicklung                             │
+│  4. Iteratives Mockup & Prototyping                         │
+│  5. User Testing & Feedback Loops                           │
+│                                                             │
+│  UI/UX PATTERNS (Beispiele):                                │
+│  📝 Traditionelle Forms (Power User, hohe Datendichte)      │
+│  💬 Conversational UI (Self-Service, einfache Prozesse)     │
+│  🔀 Hybrid (Forms + AI-Assistent, Best of Both)             │
+│                                                             │
+│  PROJEKTERFAHRUNG:                                          │
+│  • [Projekt 1: Oracle Forms → React Migration]             │
+│  • [Projekt 2: Insurance Platform Modernisierung]          │
+│                                                             │
+│  FÜR WGV EMPFOHLEN:                                         │
+│  • Hybrid Approach (Forms + AI-Assistent für Power User)   │
+│  • Schrittweise Migration (nicht Big Bang)                 │
+│  • User Testing mit echten Sachbearbeitern                  │
+│                                                             │
+│  Q&A                                                        │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 **Miro Elements:**
-- Left column: INPUT (codecentric provides pattern descriptions + mockups)
-- Right column: CAPTURE (WGV identifies which masks fit which pattern)
-- Bottom section: CAPTURE decision
+- Präsentations-Folien (INPUT von codecentric)
+- Keine CAPTURE-Bereiche (keine sticky notes, keine kollaborative Entscheidung)
+- Q&A Bereich für Fragen
 
-**Time:** ~1.5 hours (90 min) - aligned with committed agenda "Anwendungskonzept (UI/UX) Skizze"
+**Facilitator Approach:**
+- codecentric präsentiert Methodologie und Beispiele
+- WGV stellt Verständnisfragen
+- **KEINE** detaillierte User Journey Analyse
+- **KEINE** Mockup-Erstellung im Workshop
+- Ziel: WGV versteht, WIE codecentric UX/UI Transformation angeht (für spätere Projekt-Phasen)
+
+**Time:** 45-60 min (30-40 min Präsentation + 15-20 min Q&A)
 
 ---
 
@@ -424,10 +455,18 @@ VOTIERUNG: Jeder Teilnehmer bekommt 5 Punkte (Dots) zum Verteilen
 │                                                             │
 │  DSP (Daten-SP):                                            │
 │  • [SP Name] - Signature, Zweck, Abhängigkeiten            │
+│    Example: SP_KUNDE_SUCHEN                                 │
+│    - Input: Suchkriterien (Name, PLZ)                       │
+│    - Output: KundenListe                                    │
+│    - **Entities: KUNDE (Read), ADRESSE (Read)**             │
 │  • ...                                                      │
 │                                                             │
 │  GSP (Geschäftslogik-SP):                                   │
 │  • [SP Name] - Signature, Zweck, Abhängigkeiten            │
+│    Example: SP_SCHADEN_ANLEGEN                              │
+│    - Input: SchadenArt, Datum, BeschreibungText            │
+│    - Output: SchadenID                                      │
+│    - **Entities: SCHADEN (Create), KUNDE (Read-only)**      │
 │  • ...                                                      │
 │                                                             │
 │  TSP (Transaktions-SP):                                     │
@@ -438,10 +477,24 @@ VOTIERUNG: Jeder Teilnehmer bekommt 5 Punkte (Dots) zum Verteilen
 │  • Welche SPs aus ICIS+ können wiederverwendet werden?      │
 │  • Welche müssen neu exponiert werden?                      │
 │                                                             │
+├─────────────────────────────────────────────────────────────┤
+│  INFORMATION ARCHITECTURE (DETAIL-EBENE):                   │
+│                                                             │
+│  ENTITY-ZUGRIFF pro SP (dokumentiert während Präsentation): │
+│  • SP_KUNDE_SUCHEN → Read: KUNDE, ADRESSE                  │
+│  • SP_SCHADEN_ANLEGEN → Create: SCHADEN, Read: KUNDE       │
+│  • SP_VERTRAG_ÄNDERN → Update: VERTRAG, Read: PRODUKT      │
+│                                                             │
+│  DATEN-FLUSS-MUSTER:                                        │
+│  • Welche SPs greifen auf Shared Entities zu? (z.B. KUNDE) │
+│  • Welche SPs sind Bounded-Context-spezifisch?              │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Facilitator Reference:** Use Service-SP-Katalog template from `/facilitation/tag2_architecture_decisions_guide.md` Activity 2
+**Facilitator Reference:** 
+- Use Service-SP-Katalog template from `/facilitation/tag2_architecture_decisions_guide.md` Activity 2
+- **Information Architecture**: Dokumentiere Entity-Zugriff (CRUD-Operations) für jede SP - verbindet Business-Sicht (Frame 3) mit technischer Detail-Sicht
 
 ---
 
@@ -968,9 +1021,9 @@ TEMPLATE: Use Miro shapes library (rectangles, arrows, icons)
 |-------|------|----------------|
 | 1 | INPUT | 5 min |
 | 2 | INPUT | 3 min |
-| 3 | CAPTURE | 120 min |
+| 3 | CAPTURE | 150 min |
 | 4 | CAPTURE | 90 min |
-| 5 | HYBRID | 90 min |
+| 5 | INPUT | 45-60 min |
 | 6 | CAPTURE | 45 min |
 | 7 | CAPTURE | 45 min |
 | 8 | HYBRID | 85 min |
@@ -986,7 +1039,7 @@ TEMPLATE: Use Miro shapes library (rectangles, arrows, icons)
 
 **Total: ~18-20 hours** (fits comfortably in 3 days with breaks)
 
-**Day 1 subtotal (Frames 1-7):** 398 min (6h 38min) - aligned with committed agenda 6h 15min + transitions
+**Day 1 subtotal (Frames 1-7):** 383-398 min (6h 23min - 6h 38min) - Frame 3 extended to 150 min (full ICIS Deep Dive), Frame 5 reduced to INPUT-only (45-60 min)
 
 **Day 2 subtotal (Opening + Frames 8-13):** 310 min (5h 10min) - committed agenda 6h 30min, adjusted to 5h 55min (recap 10 min, AI integration 45 min), 45 min gap covered by efficient facilitation + transitions
 
