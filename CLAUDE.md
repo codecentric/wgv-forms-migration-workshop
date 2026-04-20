@@ -40,11 +40,14 @@ This is a **documentation and planning repository** for a codecentric workshop w
 ```
 /
 ├── angebot/                    # Workshop proposals and materials
-│   ├── 2026-03-02_Entwurf_Agenda_v2.md    # Latest workshop agenda (use this)
-│   ├── Entwurf_Agenda.md                   # Initial agenda draft
-│   ├── Ausgangslage_no_image.md            # Project situation analysis
-│   ├── Ausgangaslage_WGV_Modernisierung.md # Extended situation (with images)
-│   └── WGV_Workshop_Outline_Mail.md        # Initial email outline
+│   ├── 2026-04-15_Entwurf_Agenda_v3.md          # Latest committed agenda (use this)
+│   ├── workshop_storyline.md                    # SCR (Situation-Complication-Resolution) storyline
+│   ├── presentation_layout_recommendations.md   # Slide layout with visual flow & animation strategy
+│   ├── miro_board_structure.md                  # 17 frames across 4 boards (Storyline + Day 1-3)
+│   ├── Entwurf_Agenda.md                        # Initial agenda draft
+│   ├── Ausgangslage_no_image.md                 # Project situation analysis
+│   ├── Ausgangaslage_WGV_Modernisierung.md      # Extended situation (with images)
+│   └── WGV_Workshop_Outline_Mail.md             # Initial email outline
 ├── rollen/                     # Role definitions for workshop experts
 │   ├── ux_ui_expert.md                     # UX/UI Expert role
 │   ├── solution_architect.md               # Solution Architect role
@@ -58,15 +61,29 @@ This is a **documentation and planning repository** for a codecentric workshop w
 │   └── architektur_schaubild_icis_gesamt.svg    # Complete ICIS system architecture
 ├── context/                    # Interpretations and explanations of diagrams
 │   ├── DIAGRAM_REFERENCES.md                    # Registry mapping diagrams to interpretations
+│   ├── TECH_REFERENCES.md                       # Registry of technical reference documents
 │   ├── icis_oracle_forms_architektur.md         # Interpretation of Oracle Forms architecture
 │   ├── architektur_schaubild_icis_gesamt.md     # Interpretation of complete ICIS architecture
+│   ├── icis_plus_jee_architekture.md            # Interpretation of ICIS+ JEE architecture
+│   ├── tier_architecture.md                     # Generic 3-tier architecture pattern
+│   ├── plsql_functions_vs_procedures.md         # PL/SQL fundamentals (functions vs procedures)
+│   ├── migration_risk_assessment.md             # Risk matrix (10 risks, Impact × Probability)
+│   ├── oracle_forms_migration_options_reference.md  # Flynn Jones article excerpts (APEX/Java/.NET)
+│   ├── gestaltgesetze_ux_laws_cognitive_bias.md # UX/UI design principles
 │   ├── Modernisierungsworkshop-Draft.md         # WGV's detailed workshop expectations
 │   └── workshop_mapping.md                      # Mapping of committed agenda to WGV expectations
 ├── facilitation/               # Workshop facilitation methods and frameworks
 │   ├── decision_frameworks.md                   # Decision-making frameworks for IT transformation
-│   ├── tag1_domain_mapping_guide.md             # Day 1 DDD activities: Event Storming, Context Mapping, Domain Storytelling
-│   ├── tag1_icis_deep_dive_guide.md             # Day 1 ICIS-Klassik & ICIS+ analysis: 60 questions, 9 templates
-│   └── tag1_icis_deep_dive_cheat_sheet.md       # Quick reference (1-page) for ICIS Deep Dive facilitators
+│   ├── tag1_domain_mapping_guide.md             # Day 1: DDD activities (Event Storming, Context Mapping, Domain Storytelling)
+│   ├── tag1_bounded_context_session_guide.md    # Day 1: Bounded Context discovery session guide
+│   ├── bounded_context_discovery_questionnaire.md # Day 1: Structured questionnaire for BC discovery
+│   ├── tag1_icis_deep_dive_guide.md             # Day 1: ICIS-Klassik & ICIS+ analysis (60 questions, 9 templates)
+│   ├── tag1_icis_deep_dive_cheat_sheet.md       # Day 1: Quick reference for ICIS Deep Dive facilitators
+│   ├── tag1_maskenanalyse_guide.md              # Day 1: Mask analysis methodology
+│   ├── tag1_uiux_konzept_guide.md               # Day 1: UI/UX concept development
+│   ├── tag1_features_ai_guide.md                # Day 1: AI features identification
+│   ├── tag2_architecture_decisions_guide.md     # Day 2: Architecture & technology decisions (7 activities)
+│   └── tag2_architecture_diagram_foundation.md  # Day 2: Architecture diagram skeleton for Miro
 └── wgv_attachments/           # Supporting media
     ├── *_ICIS-*.jpg           # Screenshots of current ICIS system
     └── *.mp4                  # Demo videos of Oracle Forms workflows
@@ -117,19 +134,21 @@ These role definitions are used to:
 ## Working with Workshop Materials
 
 ### Current Status
-- **Committed agenda**: `20260303_commited_agend.md` (agreed with WGV for 28-30 April 2026)
-- **Detailed draft**: `angebot/2026-03-02_Entwurf_Agenda_v2.md` (reference for time estimates and detailed structure)
+- **Committed agenda**: `angebot/2026-04-15_Entwurf_Agenda_v3.md` (agreed with WGV for 28-30 April 2026)
+- **Workshop storyline**: `angebot/workshop_storyline.md` (SCR structure: Situation-Complication-Resolution)
+- **Miro workshop structure**: `angebot/miro_board_structure.md` (17 frames across 4 boards)
 - Workshop materials are in **German**
-- Modified files in git: Check `Entwurf_Agenda.md` for recent changes
-- **Role definitions**: See `/rollen` directory for expert personas (currently without workshop day-specific goals)
+- **Role definitions**: See `/rollen` directory for expert personas
+- **Facilitation guides**: Complete guides for Day 1 (6 guides) and Day 2 (2 guides) in `/facilitation`
 
 ### When Updating Workshop Content
 
-1. **Agenda files**: Keep both versions for reference; v2 is the active version
+1. **Agenda files**: `2026-04-15_Entwurf_Agenda_v3.md` is the committed agenda (use this)
 2. **Language**: All content should be in German
 3. **Technical depth**: Balance business stakeholder and developer audiences
 4. **Time estimates**: Include realistic timing for each workshop section
 5. **Outputs & Decisions**: Clearly mark expected outputs and decision points for each day
+6. **Verify timing**: Always compare facilitator guide durations with committed agenda slots
 
 ### Key Stakeholders
 - Herr Bechtold (WGV)
@@ -159,6 +178,37 @@ The `/facilitation` directory contains methods, frameworks, and tools for facili
   - Facilitator role: WGV presents, we ask structured questions and document
   - Expected outputs: Service inventory, reusability assessment, pain points catalog, migration strategy canvas
 
+- **tag1_icis_deep_dive_cheat_sheet.md**: 1-page quick reference for ICIS Deep Dive facilitators
+
+- **tag1_maskenanalyse_guide.md**: Structured methodology for analyzing Oracle Forms masks
+
+- **tag1_uiux_konzept_guide.md**: Guide for developing UI/UX concepts with hybrid conversational + forms interface
+
+- **tag1_features_ai_guide.md**: Framework for identifying AI feature opportunities in mask workflows
+
+- **tag1_bounded_context_session_guide.md**: Session guide for Bounded Context discovery
+
+- **bounded_context_discovery_questionnaire.md**: Structured questionnaire for Bounded Context identification
+
+### Tag 2 Facilitation Guides
+
+- **tag2_architecture_decisions_guide.md**: Comprehensive Day 2 facilitator guide (~6.5h):
+  - Activity 1: Recap Tag 1 & Scope refinement (30min)
+  - Activity 2: Service/Stored Procedures presentation & analysis (1h 15min) - WGV presents, facilitated structured analysis
+  - Activity 3: Technical feasibility analysis using 6-criteria matrix (1h)
+  - Activity 4: Integration Layer decision (Spring Boot/ORDS/Hybrid) with comparison table (1h)
+  - Activity 5: Deployment decision (VMs/Docker/K8s/Azure Container Apps) (45min)
+  - Activity 6: AI Integration patterns (MCP/Spring AI/Direct/Hybrid) (1h)
+  - Activity 7: Collaborative architecture diagram drawing (1h)
+  - Includes ADR templates, Service-SP-Katalog, Machbarkeits-Matrix with risk scoring
+  - ⚠️ **Note**: Activity order deviates from committed agenda - AI Integration moved from position 4 to 6 (requires verification with client)
+
+- **tag2_architecture_diagram_foundation.md**: Architecture diagram skeleton for Miro Frame 12:
+  - 4-layer structure (Frontend, Integration, Backend, External Systems)
+  - Pre-drawn components with decision placeholders
+  - 5-phase facilitation strategy (Foundation Review → Technology Mapping → Service-SP Mapping → Data Flow → Risks)
+  - Miro setup instructions with interactive elements (sticky notes, connectors, annotations)
+
 These frameworks help us facilitate structured discussions and decision-making processes with WGV during the workshop.
 
 ## Diagrams and Context Documentation
@@ -187,6 +237,9 @@ Technical reference documents and architecture interpretations explain concepts,
 
 **Technical References:**
 5. **`plsql_functions_vs_procedures.md`**: Oracle PL/SQL fundamentals - differences between functions and procedures (language specification vs. best practices), RETURN vs. OUT parameters, integration layer examples
+6. **`migration_risk_assessment.md`**: Risk matrix with 10 risks (R1-R10) scored by Impact × Probability; includes mitigation strategies for Oracle Forms migration
+7. **`oracle_forms_migration_options_reference.md`**: Key excerpts from Flynn Jones article comparing APEX, Java, .NET migration paths; includes Strangler Fig pattern emphasis and technology decision matrix
+8. **`gestaltgesetze_ux_laws_cognitive_bias.md`**: UX/UI design principles (Gestalt laws, UX laws, cognitive biases) for modern interface design
 
 ### Convention: Separating Visual and Textual Documentation
 
