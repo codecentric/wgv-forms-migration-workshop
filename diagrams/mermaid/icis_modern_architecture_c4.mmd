@@ -1,0 +1,56 @@
+%% ICIS Modernisierte Architektur (Ziel-Architektur)
+%% Typ: C4 Container Diagram (Level 2)
+%% Autor: Sócrates Ponce (codecentric)
+%% Datum: 2026-04-16
+%% Zweck: Visualisierung der geplanten modernen Architektur nach Modernisierung
+%% Kontext: WGV ICIS Modernisierungs-Workshop (28-30 April 2026)
+%% Basierend auf: Workshop-Diskussionen, ICIS+ Architektur, geplante Migrations-Strategie
+
+C4Container
+    title Container Diagram - ICIS Modernisierte Architektur (Ziel-Zustand)
+
+    Person(sachbearbeiter, "Sachbearbeiter", "Power User - Versicherungsspezialist, nutzt komplexe Workflows")
+    Person(kunde, "Kunde / Partner", "End User - Nutzt Self-Service-Portal oder Mobile App")
+
+    System_Boundary(icis_modern, "ICIS Modernisiert") {
+        Container(webapp, "Web Application", "React / Angular", "Moderne SPA für Sachbearbeiter, ersetzt Oracle Forms")
+        Container(mobileapp, "Mobile App", "React Native / PWA", "Mobile Anwendung für Außendienst und Kunden")
+        Container(api, "Integration Layer (API)", "Spring Boot", "REST API - Exponiert PL/SQL Services, orchestriert Geschäftslogik")
+        Container(ai_gateway, "AI Gateway", "Spring Boot + LangChain", "Conversational UI, AI Agents, MCP Integration")
+        ContainerDb(database, "Datenbank ICIS", "Oracle Database", "Persistente Datenhaltung, PL/SQL Service Stored Procedures (bleibt unverändert)")
+    }
+
+    System_Ext(sap, "SAP", "Finanzen, Controlling")
+    System_Ext(cor_life, "COR Life", "Lebensversicherungs-System (msg)")
+    System_Ext(gdv, "GDV-Schnittstelle", "Gesamtverband der Deutschen Versicherungswirtschaft - Branchenstandard")
+    System_Ext(dms, "Imagemaster DMS", "Dokumenten-Management-System")
+
+    Rel(sachbearbeiter, webapp, "Nutzt", "HTTPS")
+    Rel(sachbearbeiter, ai_gateway, "Interagiert via Chatbot", "HTTPS / WebSocket")
+    Rel(kunde, mobileapp, "Nutzt", "HTTPS")
+
+    Rel(webapp, api, "API Calls", "REST/JSON, HTTPS")
+    Rel(mobileapp, api, "API Calls", "REST/JSON, HTTPS")
+    Rel(ai_gateway, api, "API Calls", "REST/JSON, HTTPS")
+
+    Rel(api, database, "Ruft PL/SQL Services auf", "JDBC, SQL Net")
+    Rel(ai_gateway, database, "Liest Daten für AI Features", "JDBC, SQL Net")
+
+    Rel(api, sap, "Sendet Finanzdaten", "REST / SOAP")
+    Rel(api, cor_life, "Synchronisiert Lebensversicherungs-Daten", "REST / SOAP")
+    Rel(api, gdv, "GDV-Meldungen", "MQ Series / File Transfer")
+    Rel(api, dms, "Speichert/Lädt Dokumente", "REST API")
+
+    UpdateElementStyle(sachbearbeiter, $fontColor="black", $bgColor="#08427b", $borderColor="#073B6F")
+    UpdateElementStyle(kunde, $fontColor="black", $bgColor="#1168bd", $borderColor="#0E5A9D")
+    UpdateElementStyle(webapp, $fontColor="black", $bgColor="#85bbf0", $borderColor="#5D9DD5")
+    UpdateElementStyle(mobileapp, $fontColor="black", $bgColor="#85bbf0", $borderColor="#5D9DD5")
+    UpdateElementStyle(api, $fontColor="black", $bgColor="#438dd5", $borderColor="#3C7FC0")
+    UpdateElementStyle(ai_gateway, $fontColor="black", $bgColor="#438dd5", $borderColor="#3C7FC0")
+    UpdateElementStyle(database, $fontColor="black", $bgColor="#1168bd", $borderColor="#0E5A9D")
+    UpdateElementStyle(sap, $fontColor="black", $bgColor="#999999", $borderColor="#6B6B6B")
+    UpdateElementStyle(cor_life, $fontColor="black", $bgColor="#999999", $borderColor="#6B6B6B")
+    UpdateElementStyle(gdv, $fontColor="black", $bgColor="#999999", $borderColor="#6B6B6B")
+    UpdateElementStyle(dms, $fontColor="black", $bgColor="#999999", $borderColor="#6B6B6B")
+
+    UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")

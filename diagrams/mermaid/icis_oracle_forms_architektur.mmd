@@ -1,0 +1,100 @@
+%% ICIS Oracle Forms Architektur (Legacy) - Detailliert
+%% Quelle: diagrams/icis_oracle_forms_architektur.svg
+%% Interpretation: context/icis_oracle_forms_architektur.md
+%% Verifiziert gegen: Oracle Forms Services Architecture 14.1.2
+%% Autor: Sócrates Ponce (codecentric)
+%% Datum: 2026-04-16 (Korrigiert basierend auf Oracle-Dokumentation)
+%% Original-Diagramm von: Fatih Acikgöz (05.05.2022)
+%% Typ: Flowchart mit Subgraphen (Top-to-Bottom)
+%% Zweck: Visualisierung der Oracle Forms 3-Tier-Architektur mit ZWEI PL/SQL-Typen
+
+graph TB
+    subgraph ClientTier["Client-Tier"]
+        FormsJavaClient["Forms Java Client"]
+    end
+
+    subgraph AppServerTier["Application Server Tier"]
+        WebLogicServer["weblogic-server"]
+        FormsRuntime["forms-runtime"]
+        ICISForms["icis-forms"]
+        OracleFSAL["Oracle-FSAL<br/>(Forms Server Application Layer)"]
+
+        subgraph FormsArch["Oracle Forms Architecture (Java VM) - Forms Runtime Process"]
+            UIPresentation["UI Presentation<br/>(Darstellungsschicht)"]
+            AppLogic["Application Logic<br/>(Geschäftslogik)"]
+
+            subgraph FormsPLSQLExec["Forms PL/SQL Execution (Middle-Tier!)"]
+                FormsTriggers["Führt aus: Forms Trigger<br/>(z.B. WHEN-BUTTON-PRESSED)"]
+                FormsProgramUnits["Führt aus: Forms Program Units<br/>(Prozeduren/Funktionen im FMB)"]
+            end
+
+            DataManager["Data Manager<br/>(sendet SQL + DB SP Calls)"]
+
+            UIPresentation --> AppLogic
+            AppLogic --> FormsPLSQLExec
+            FormsPLSQLExec --> DataManager
+        end
+
+        WebLogicServer --> FormsRuntime
+        FormsRuntime --> ICISForms
+        ICISForms --> OracleFSAL
+        OracleFSAL --> FormsArch
+    end
+
+    subgraph DatabaseTier["Database-Tier (Oracle Database)"]
+        direction TB
+
+        DatabaseICIS["Oracle Database"]
+
+        subgraph DBEngine["Datenbank-Engine (läuft IN der Datenbank)"]
+            SQLEngine["SQL Engine"]
+            DBPLSQLEngine["Database PL/SQL Engine<br/>(führt DB Stored Procedures aus)"]
+        end
+
+        subgraph DBComponents["Datenbank-Komponenten"]
+            Tables["Datenbank-Tabellen<br/>(Persistente Daten)"]
+            Packages["Packages<br/>(PL/SQL Geschäftslogik)"]
+            Views["Views<br/>(Datenbank-Sichten)"]
+            FMX["FMX-Dateien<br/>(Kompilierte Forms)"]
+        end
+
+        subgraph ServiceProcedures["Database Service Procedures (ausgeführt vom DB PL/SQL Engine)"]
+            BSP["BSP / BSV<br/>(Business Service Procedures/Views)<br/>← Database PL/SQL"]
+            DSP["DSP / DSV<br/>(Data Service Procedures/Views)<br/>← Database PL/SQL"]
+            GSP["GSP<br/>(General Service Procedures)<br/>← Database PL/SQL"]
+            TSP["TSP<br/>(Transaction Service Procedures)<br/>← Database PL/SQL"]
+        end
+
+        DatabaseICIS --> DBEngine
+        DatabaseICIS --> DBComponents
+        DatabaseICIS --> ServiceProcedures
+        DBPLSQLEngine -.->|"führt aus"| ServiceProcedures
+    end
+
+    %% Kommunikation zwischen Tiers
+    FormsJavaClient -->|HTTP Request| WebLogicServer
+    DataManager -->|"SQL Net / JDBC<br/>(sendet SQL + DB Stored Procedure Calls)"| DatabaseICIS
+    DatabaseICIS --> DBPLSQLEngine
+
+    %% Notizen
+    Note1["WICHTIG - Zwei PL/SQL-Ausführungsumgebungen:<br/>1. Forms PL/SQL (Middle-Tier): Trigger, Program Units → ausgeführt in Forms Runtime<br/>2. Database PL/SQL (Database-Tier): Stored Procedures (BSP, DSP, etc.) → ausgeführt in DB PL/SQL Engine<br/><br/>Quelle: Oracle Forms Services Architecture Documentation 14.1.2<br/>'runs any PL/SQL in the form; executes triggers'"]
+
+    FormsArch -.->|Erklärung| Note1
+    ServiceProcedures -.->|Erklärung| Note1
+
+    %% Styling
+    classDef clientStyle fill:#e1f5dd,stroke:#6b9f7f,stroke-width:2px,color:#000
+    classDef appServerStyle fill:#fff4dd,stroke:#d4a056,stroke-width:2px,color:#000
+    classDef formsPLSQLStyle fill:#ffd699,stroke:#ff8c00,stroke-width:2px,color:#000
+    classDef databaseStyle fill:#ddeeff,stroke:#5689c4,stroke-width:2px,color:#000
+    classDef dbPLSQLStyle fill:#99ccff,stroke:#0066cc,stroke-width:2px,color:#000
+    classDef tierStyle fill:#f0f0f0,stroke:#333,stroke-width:3px,stroke-dasharray: 5 5
+    classDef noteStyle fill:#ffe6e6,stroke:#cc0000,stroke-width:2px,color:#000,stroke-dasharray: 5 5
+
+    class FormsJavaClient clientStyle
+    class WebLogicServer,FormsRuntime,ICISForms,OracleFSAL,UIPresentation,AppLogic,DataManager appServerStyle
+    class FormsTriggers,FormsProgramUnits formsPLSQLStyle
+    class SQLEngine,DatabaseICIS,Tables,Packages,Views,FMX databaseStyle
+    class DBPLSQLEngine,BSP,DSP,GSP,TSP dbPLSQLStyle
+    class ClientTier,AppServerTier,DatabaseTier tierStyle
+    class Note1 noteStyle

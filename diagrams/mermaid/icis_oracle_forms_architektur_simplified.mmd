@@ -1,0 +1,71 @@
+%% ICIS Oracle Forms Architektur (Legacy) - Vereinfachte 3-Tier-Version
+%% Quelle: diagrams/icis_oracle_forms_architektur.svg
+%% Interpretation: context/icis_oracle_forms_architektur.md
+%% Autor: Sócrates Ponce (codecentric)
+%% Datum: 2026-04-16
+%% Original-Diagramm von: Fatih Acikgöz (05.05.2022)
+%% Typ: Flowchart mit Subgraphen (Top-to-Bottom) - Vereinfacht
+%% Zweck: Klare 3-Tier-Darstellung ohne interne Details (für schnelles Verständnis)
+
+graph TB
+    subgraph ClientTier["Client-Tier (Thin Client)"]
+        FormsJavaClient["Forms Java Client<br/>(Browser mit Java Plugin)"]
+    end
+
+    subgraph MiddleTier["Middle-Tier (Application Server)"]
+        WebLogicServer["WebLogic Application Server"]
+        FormsRuntime["Oracle Forms Runtime Process<br/>(Forms Services)"]
+
+        subgraph FormsInternals["Forms Runtime ausführt:"]
+            FormsPLSQL["Forms PL/SQL<br/>(Trigger, Program Units aus FMB)"]
+            DataManager["Data Manager<br/>(sendet DB-Calls)"]
+        end
+
+        ICISForms["ICIS Forms-Anwendung<br/>(~900 FMB-Masken)"]
+
+        WebLogicServer --> FormsRuntime
+        FormsRuntime --> ICISForms
+        ICISForms --> FormsInternals
+    end
+
+    subgraph DatabaseTier["Database-Tier (Oracle Database)"]
+        direction TB
+
+        OracleDB["Oracle Database"]
+
+        subgraph DBInternals["Datenbank-Interna"]
+            SQLEngine["SQL Engine"]
+            DBPLSQLEngine["Database PL/SQL Engine<br/>(führt Stored Procedures aus)"]
+        end
+
+        subgraph DBObjects["Datenbank-Objekte"]
+            Tables["Tabellen<br/>(Persistente Daten)"]
+            StoredProcs["Stored Procedures<br/>(BSP, DSP, GSP, TSP)"]
+            Packages["PL/SQL Packages"]
+            Views["Views"]
+        end
+
+        OracleDB --> DBInternals
+        OracleDB --> DBObjects
+    end
+
+    %% Kommunikation zwischen Tiers
+    FormsJavaClient -->|"HTTP Request<br/>(über Internet)"| WebLogicServer
+    DataManager -->|"SQL Net / JDBC<br/>(SQL + DB Stored Procedure Calls)"| OracleDB
+
+    %% Notizen
+    Note1["WICHTIG: Es gibt ZWEI PL/SQL-Ausführungsumgebungen:<br/>1. Forms PL/SQL Engine (Middle-Tier - führt Trigger aus)<br/>2. Database PL/SQL Engine (Database-Tier - führt Stored Procedures aus)<br/><br/>Quelle: Oracle Forms Services Architecture 14.1.2"]
+
+    MiddleTier -.->|Erklärung| Note1
+    DatabaseTier -.->|Erklärung| Note1
+
+    %% Styling
+    classDef clientStyle fill:#e1f5dd,stroke:#6b9f7f,stroke-width:3px,color:#000
+    classDef middleStyle fill:#fff4dd,stroke:#d4a056,stroke-width:3px,color:#000
+    classDef databaseStyle fill:#ddeeff,stroke:#5689c4,stroke-width:3px,color:#000
+    classDef noteStyle fill:#ffe6e6,stroke:#cc0000,stroke-width:2px,color:#000,stroke-dasharray: 5 5
+
+    class FormsJavaClient clientStyle
+    class WebLogicServer,FormsRuntime,ICISForms middleStyle
+    class OracleDB,SQLEngine,PLSQLEngine,Tables,StoredProcs,Packages,Views databaseStyle
+    class Note1 noteStyle
