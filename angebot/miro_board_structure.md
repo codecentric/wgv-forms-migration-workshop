@@ -22,13 +22,14 @@
 
 ### **Board 2: Tag 1 - Discovery & Scoping**
 - Frame 3: Domain Map (CAPTURE - Event Storming Lite results)
-- Frame 4: Mask Analysis Matrix (CAPTURE - 10-15 candidate masks)
+- Frame 4: Mask Analysis - Three-Tier Funnel (CAPTURE - 2×2 Matrix, RICE Scoring, Pattern Matching → 3-5 MVP masks)
 - Frame 5: UI/UX Patterns Comparison (INPUT + CAPTURE hybrid)
 - Frame 6: AI Features Brainstorm (CAPTURE - sticky notes)
 - Frame 7: Initial Scope Decision (CAPTURE - voting + rationale)
 
 ### **Board 3: Tag 2 - Architecture & Technology**
 - Opening: Recap Tag 1 & Scope refinement (10 min verbal, no dedicated frame)
+- Frame 7.5: Migration Strategy - Strangler Fig Validation (HYBRID - codecentric recommendation + WGV objections/additions)
 - Frame 8: Services/SP Overview + Integration Layer Comparison (HYBRID - WGV presents SPs, codecentric presents tech comparison)
 - Frame 9: Technical Feasibility + Integration Layer Decision (CAPTURE - MVP mask assessment + decision + ADR)
 - Frame 10: Deployment Options Comparison (INPUT - VMs, Docker, K8s, ACA)
@@ -42,7 +43,7 @@
 - Frame 16: AI-Driven Dev Workshop Space (CAPTURE - hands-on notes)
 - Frame 17: Next Steps & Roadmap (CAPTURE - action items, timeline)
 
-**Total: ~17 frames** (lean, focused)
+**Total: ~18 frames** (lean, focused)
 
 ---
 
@@ -226,45 +227,181 @@ The architecture diagrams (`architektur_schaubild_icis_gesamt.svg`, `icis_oracle
 
 ---
 
-### **Frame 4: Mask Analysis Matrix (CAPTURE)**
+### **Frame 4: Mask Analysis - Three-Tier Funnel (CAPTURE)**
 
-**Purpose:** Analyze 10-15 candidate masks for MVP selection
+**Purpose:** Apply systematic methodology to select 3-5 MVP masks from ~900 using 2×2 Complexity Matrix, RICE Scoring, and Pattern Matching
+
+**Note:** This frame captures the output of the three-tier funnel approach from `/facilitation/tag1_maskenanalyse_guide.md`
 
 **Layout:**
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────┐
-│  MASKEN-ANALYSE: MVP-KANDIDATEN                                                  │
-├─────────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┤
-│ Masken-Name │Komplexität│Geschäfts-│PL/SQL    │Abhängig- │AI-Kandi- │MVP       │
-│             │(1-5)     │wert      │Integration│keiten    │dat?      │Priority  │
-│             │          │(1-5)     │(einfach/  │(wenig/   │(ja/nein) │(1-5)     │
-│             │          │          │mittel/    │mittel/   │          │          │
-│             │          │          │komplex)   │viel)     │          │          │
-├─────────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-│[Maske 1]    │          │          │          │          │          │          │
-├─────────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-│[Maske 2]    │          │          │          │          │          │          │
-├─────────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-│...          │          │          │          │          │          │          │
-└─────────────┴──────────┴──────────┴──────────┴──────────┴──────────┴──────────┘
+│  MASKEN-ANALYSE: DREI-STUFEN-TRICHTER                                            │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                  │
+│  TIER 1: QUICK CATEGORIZATION (~20-25min)                                       │
+│  900 Masken → ~50-80 Kandidaten (Filter: Frequency, User Count, Critical, Active)│
+│                                                                                  │
+│  📊 FILTER RESULTS:                                                              │
+│  [Text box: "Nach Filtern: X Masken übrig"]                                     │
+│                                                                                  │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│  TIER 2: PATTERN-BASED SAMPLING (~25-30min)                                     │
+│  ~50-80 → 10-15 Representative (Clustering: Bounded Context × 2×2 Matrix)       │
+│                                                                                  │
+│  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ │
+│  ┃  2×2 COMPLEXITY MATRIX - BOUNDED CONTEXT CLUSTERING                       ┃ │
+│  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ │
+│                                                                                  │
+│                    LOGIC COMPLEXITY                                              │
+│                          │                                                       │
+│              ┌───────────┼───────────┐                                           │
+│              │  Q2       │    Q4     │                                           │
+│         UI   │ UI-Heavy  │  Full     │  Q1: Quick Wins (Simple UI + Logic)      │
+│              │           │  Custom   │  Q2: UI-Heavy (Complex UI + Simple Logic)│
+│      C    ───┼───────────┼───────────┼─ Q3: Logic-Heavy (Simple UI + Complex)   │
+│      o       │  Q1       │    Q3     │  Q4: Full Custom (Complex UI + Logic)    │
+│      m       │ Quick     │  Logic-   │                                           │
+│      p       │ Wins      │  Heavy    │                                           │
+│      l       │           │           │                                           │
+│      e       └───────────┴───────────┘                                           │
+│      x             │                                                             │
+│      i       Simple      Complex                                                 │
+│      t                                                                           │
+│      y                                                                           │
+│                                                                                  │
+│  MASKEN-CLUSTERING (Sticky Notes auf Matrix platzieren):                        │
+│                                                                                  │
+│  Bounded Context: VERTRAG                                                       │
+│  • [Maske 1] → Q1 | [Maske 2] → Q2 | [Maske 3] → Q4                            │
+│                                                                                  │
+│  Bounded Context: SCHADEN                                                       │
+│  • [Maske 4] → Q1 | [Maske 5] → Q3 | [Maske 6] → Q4                            │
+│                                                                                  │
+│  Bounded Context: KUNDE/PARTNER                                                 │
+│  • [Maske 7] → Q1 | [Maske 8] → Q2                                             │
+│                                                                                  │
+│  [Weitere Bounded Contexts...]                                                  │
+│                                                                                  │
+│  📋 REPRÄSENTATIVE AUSWAHL: 10-15 Masken (1-2 pro Zelle)                        │
+│                                                                                  │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│  TIER 3: RICE SCORING DEEP DIVE (~15-20min)                                     │
+│  10-15 → 3-5 MVP-Kandidaten                                                     │
+│                                                                                  │
+│  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ │
+│  ┃  RICE SCORING TABLE                                                        ┃ │
+│  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ │
+│                                                                                  │
+│  ┌──────────┬────────┬──────┬────────┬──────────┬──────┬──────┬─────────┬────┐ │
+│  │ Mask ID  │ Name   │Reach │Impact  │Confidence│Effort│ RICE │Quadrant │Pat-│ │
+│  │          │        │(User/│(1-5)   │(%)       │(weeks│Score │(Q1-Q4)  │tern│ │
+│  │          │        │month)│        │          │)     │      │         │    │ │
+│  ├──────────┼────────┼──────┼────────┼──────────┼──────┼──────┼─────────┼────┤ │
+│  │ M001     │[Name]  │      │        │          │      │      │ Q1      │ P1 │ │
+│  ├──────────┼────────┼──────┼────────┼──────────┼──────┼──────┼─────────┼────┤ │
+│  │ M042     │[Name]  │      │        │          │      │      │ Q1      │ P1 │ │
+│  ├──────────┼────────┼──────┼────────┼──────────┼──────┼──────┼─────────┼────┤ │
+│  │ M089     │[Name]  │      │        │          │      │      │ Q4      │ P6 │ │
+│  ├──────────┼────────┼──────┼────────┼──────────┼──────┼──────┼─────────┼────┤ │
+│  │ ...      │        │      │        │          │      │      │         │    │ │
+│  └──────────┴────────┴──────┴────────┴──────────┴──────┴──────┴─────────┴────┘ │
+│                                                                                  │
+│  **RICE Formula:** (Reach × Impact × Confidence) / Effort                       │
+│                                                                                  │
+│  **Effort Estimation Guidance (based on 2×2 Matrix):**                          │
+│  • Q1 (Simple/Simple): 1-2 weeks                                                │
+│  • Q2 (Complex UI/Simple): 2-3 weeks                                            │
+│  • Q3 (Simple/Complex Logic): 2-3 weeks                                         │
+│  • Q4 (Complex/Complex): 4-8 weeks                                              │
+│                                                                                  │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│  PATTERN CATALOG MATCHING (P1-P8)                                               │
+│                                                                                  │
+│  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ │
+│  ┃  8 MIGRATIONS-PATTERNS (codecentric Vorschlag)                            ┃ │
+│  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ │
+│                                                                                  │
+│  ┌─────┬───────────────────┬──────────┬─────────────────────┬─────────────┐    │
+│  │ ID  │ Pattern Name      │ Quadrant │ Migrations-Ansatz   │ Aufwand     │    │
+│  ├─────┼───────────────────┼──────────┼─────────────────────┼─────────────┤    │
+│  │ P1  │ Simple CRUD       │ Q1       │ React/Angular (AI)  │ 1-2w        │    │
+│  │ P2  │ Search & Filter   │ Q1/Q2    │ React + Data Grid   │ 1-2w        │    │
+│  │ P3  │ Multi-Tab Form    │ Q2       │ React/Angular (Tabs)│ 2-3w        │    │
+│  │ P4  │ Wizard Workflow   │ Q1-Q3    │ React (Stepper)     │ 2-4w        │    │
+│  │ P5  │ Calculation-Heavy │ Q3       │ Integration-Layer-First │ 2-3w    │    │
+│  │ P6  │ Complex Workflow  │ Q4       │ Full Custom (AI)    │ 4-8w        │    │
+│  │ P7  │ Report Generator  │ Q1       │ React + Template    │ 2-3w        │    │
+│  │ P8  │ Conversational    │ Q4       │ Chatbot + Form      │ 4-8w        │    │
+│  └─────┴───────────────────┴──────────┴─────────────────────┴─────────────┘    │
+│                                                                                  │
+│  📌 PATTERN-MATCHING WORKFLOW:                                                  │
+│  1. 2×2 Matrix klassifiziert → Quadrant (Q1-Q4)                                │
+│  2. Pattern-Matching innerhalb Quadrant → Konkreter Ansatz (P1-P8)             │
+│  3. Pattern → Automatisch: Technology Stack + Aufwand                           │
+│                                                                                  │
+│  ⚡ MIGRATIONS-VARIANTE: P3 kann auch inkrementell migriert werden              │
+│     • Phase 1: N × P1 (jeder Tab als separate Maske, schnellere Releases)      │
+│     • Phase 2: P3-Integration (Tab-Navigation + koordinierte Transaktionen)     │
+│     • Sinnvoll bei: 4+ Tabs, wenig Cross-Tab-Validierung, Time-to-Market-Druck │
+│                                                                                  │
+├──────────────────────────────────────────────────────────────────────────────────┤
+│  IMPACT/EFFORT MATRIX - QUICK WINS VISUALISIERUNG                               │
+│                                                                                  │
+│  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓ │
+│  ┃  QUICK WINS IDENTIFIKATION                                                 ┃ │
+│  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛ │
+│                                                                                  │
+│        High Impact                                                               │
+│            │                                                                     │
+│     ┌──────┼──────┐                                                             │
+│     │      │      │                                                              │
+│     │  ■   │  ●   │  ■ Strategic Projects (High Effort, High Impact)           │
+│     │ Quick│Strat │  ● Quick Wins (Low Effort, High Impact) ← MVP!             │
+│     │ Wins │ Proj │  ▲ Fill-ins (Low Effort, Low Impact)                       │
+│  ───┼──────┼──────┼─── (Effort)                                                 │
+│     │      │      │  ✖ Avoid / Time Wasters (High Effort, Low Impact)          │
+│     │  ▲   │  ✖   │                                                             │
+│     │ Fill │Avoid │                                                              │
+│     └──────┴──────┘                                                             │
+│            │                                                                     │
+│        Low Impact                                                                │
+│                                                                                  │
+│  MASKEN PLATZIERT (basierend auf RICE Score + Effort):                          │
+│  • Quick Wins: [Maske A, Maske B, Maske C] → **MVP-Kandidaten!**               │
+│  • Strategic: [Maske D, Maske E] → Phase 2                                     │
+│  • Fill-ins: [Maske F] → Backlog                                               │
+│  • Avoid: [Maske G] → Nicht migrieren (AI-Ersatz oder Sunset)                  │
+│                                                                                  │
+└──────────────────────────────────────────────────────────────────────────────────┘
 
-LEGENDE:
-Komplexität: 1=sehr einfach, 5=sehr komplex
-Geschäftswert: 1=niedrig, 5=kritisch
-MVP Priority: 1=höchste Priorität für MVP
+ANALYSE-LOGIK (codecentric Vorschlag):
+1. 2×2 Complexity Matrix → Klassifiziert Komplexität (Q1-Q4)
+2. RICE Scoring → Priorisiert nach Business Value (Effort basiert auf Q1-Q4)
+3. Pattern Catalog → Matched Migration-Ansatz (P1-P8, codecentric Vorschlag)
+4. Impact/Effort Matrix → Visualisiert Quick Wins für MVP
 ```
 
 **Miro Elements:**
-- Table with rows for each mask (add rows dynamically)
-- Editable cells (use Miro text boxes)
-- Color coding: Green (MVP candidate), Yellow (Phase 2), Red (defer)
+- **Tier 1:** Text box for filter results
+- **Tier 2:** Interactive 2×2 Matrix with sticky notes (masks placed in quadrants by Bounded Context)
+- **Tier 3:** RICE Scoring table (fillable cells), Pattern Catalog reference table (pre-populated INPUT)
+- **Impact/Effort Matrix:** 2×2 grid with sticky notes for masks (drag-and-drop from RICE table)
+- **Color coding:** 
+  - Green sticky notes = Quick Wins (MVP candidates)
+  - Orange = Strategic Projects (Phase 2)
+  - Yellow = Fill-ins (Backlog)
+  - Red = Avoid (AI-Ersatz or Sunset)
 
 **Facilitator Input:**
-- WGV presents masks
-- codecentric asks structured questions (complexity, dependencies, etc.)
-- Fill table collaboratively
+- Use `/facilitation/tag1_maskenanalyse_guide.md` for step-by-step guidance (Part 2: Funnel Approach)
+- Use `/facilitation/tag1_maskenanalyse_fragenkatalog.md` for 26-question assessment
+- Use `/facilitation/tag1_masken_pattern_katalog.md` for Pattern P1-P8 definitions (codecentric Vorschlag)
+- **Tier 1:** WGV applies filters on their Excel spreadsheet (pre-workshop homework)
+- **Tier 2:** Collaborative clustering - WGV places masks on 2×2 Matrix, grouped by Bounded Context
+- **Tier 3:** Collaborative RICE scoring - WGV estimates Reach/Impact, codecentric guides Effort (based on Q1-Q4), Pattern Matching (codecentric Vorschlag), calculate together
 
-**Time:** ~1.5 hours
+**Time:** ~60-70 minutes (90-120 min total Maskenanalyse session minus 20 min Framework Introduction = 70-100 min, compressed to 60-70 min for Miro frame work)
 
 ---
 
@@ -428,6 +565,105 @@ VOTIERUNG: Jeder Teilnehmer bekommt 5 Punkte (Dots) zum Verteilen
 
 ---
 
+### **Frame 7.5: Migration Strategy - Strangler Fig Validation (HYBRID)**
+
+**Purpose:** Validate Strangler Fig migration strategy recommendation and capture WGV-specific objections or additions
+
+**Layout:**
+```
+┌─────────────────────────────────────────────────────────────┐
+│  MIGRATIONSSTRATEGIE - UNSERE EMPFEHLUNG                    │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  KONTEXT:                                                   │
+│  "Die Frontend-Migration muss möglichst schnell Mehrwert   │
+│   für WGV-Mitarbeiter liefern. Gleichzeitig ist die        │
+│   Zielrichtung nicht von Anfang an klar: Komplexe          │
+│   Geschäftslogik (abgebildet in Stored Procedures) und     │
+│   spezialisierte Power-User-Anforderungen erfordern        │
+│   iteratives Lernen. Strangler Fig ermöglicht kurze        │
+│   Feedback-Zyklen, um Risiken zu minimieren und            │
+│   Abweichungen von Business-Zielen frühzeitig zu erkennen."│
+│                                                             │
+│  ═══════════════════════════════════════════════════════   │
+│                                                             │
+│  STRANGLER FIG + BOUNDED CONTEXT + FEATURE TOGGLES          │
+│                                                             │
+│  ✅ PRO-ARGUMENTE:                                          │
+│  1. Risikominimierung durch inkrementellen Ansatz           │
+│     (Rollback einzelner Module möglich)                     │
+│  2. Schnelle Time-to-Market                                 │
+│     (Erste Features nach 3-5 Masken produktiv)              │
+│  3. Kontinuierliches Lernen & Kurskorrekturen               │
+│     (Feedback aus frühen Migrationen verbessert Folge-Phase)│
+│  4. Schrittweiser Kompetenzaufbau im Team                   │
+│     (Neue Technologien graduell lernen)                     │
+│  5. Kein "Flagday"-Risiko                                   │
+│     (Vermeidung des klassischen Cutover-Disasters)          │
+│                                                             │
+│  ❌ CON-ARGUMENTE:                                          │
+│  1. Längere Parallelbetriebs-Phase (2-3 Jahre)              │
+│  2. Doppelte Systempflege                                   │
+│     (Bugfixes ggf. in Alt- UND Neu-System)                  │
+│  3. Navigation & UX-Komplexität                             │
+│     (Routing zwischen Systemen, kritisch bei fragiler IA)   │
+│  4. Governance-Overhead                                     │
+│     (Priorisierung & architektonische Konsistenz sichern)   │
+│                                                             │
+│  ─────────────────────────────────────────────────────────  │
+│                                                             │
+│  🎯 CODECENTRIC EMPFEHLUNG: STRANGLER FIG                   │
+│                                                             │
+│  Begründung:                                                │
+│  • 900 Masken → Big Bang unrealistisch                      │
+│  • Parallel-Systeme bereits vorhanden (ICIS+, APEX)         │
+│  • Lernen aus frühen Migrationen verbessert Folge-Phasen    │
+│  • Reduziert Cutover-Risiko (kein "Alles-oder-Nichts")      │
+│                                                             │
+│  ═══════════════════════════════════════════════════════   │
+│                                                             │
+│  💬 DISKUSSION: SEHEN SIE DAS ANDERS?                       │
+│                                                             │
+│  Gibt es Faktoren, die gegen Strangler Fig sprechen?       │
+│  (z.B. Deadlines, Budget, Governance, Politik)              │
+│                                                             │
+│  [CAPTURE Bereich: Sticky Notes für Einwände/Ergänzungen]  │
+│                                                             │
+│  Zusätzliche PROs/CONs aus WGV Sicht:                       │
+│  [CAPTURE Bereich: Sticky Notes]                            │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Miro Elements:**
+- INPUT: PRO/CON analysis (pre-populated)
+- INPUT: Recommendation with rationale (pre-populated)
+- CAPTURE: Sticky notes area for objections
+- CAPTURE: Sticky notes area for additional PROs/CONs from WGV perspective
+
+**Facilitation Approach:**
+1. **Present (5-8 min):** Walk through PROs/CONs and recommendation
+2. **Check for Objections (5-10 min):** "Sehen Sie Faktoren, die dagegen sprechen?" (deadlines, budget, political constraints)
+3. **Invite Additional Insights (5 min):** "Welche PROs/CONs würden Sie aus WGV-Perspektive ergänzen?"
+
+**This is NOT:**
+- A brainstorming session comparing multiple strategies
+- An open-ended "which strategy should we choose" debate
+- A 50/50 decision where codecentric is neutral
+
+**This IS:**
+- Expert recommendation with transparent reasoning
+- Validation checkpoint: "Challenge us if we missed something critical"
+- Space for WGV to surface unknown constraints (regulatory, budget, political)
+
+**Time:** 15-20 min
+
+**Reference:**
+- `/context/oracle_forms_migration_options_reference.md` (Strangler Fig pattern)
+- `/context/migration_risk_assessment.md` (R1-R10 risks)
+
+---
+
 ### **Frame 8: Services/SP Overview + Integration Layer Comparison (HYBRID)**
 
 **Purpose:** Understand existing backend landscape (Services/Stored Procedures) before choosing integration technology
@@ -495,6 +731,17 @@ VOTIERUNG: Jeder Teilnehmer bekommt 5 Punkte (Dots) zum Verteilen
 **Facilitator Reference:** 
 - Use Service-SP-Katalog template from `/facilitation/tag2_architecture_decisions_guide.md` Activity 2
 - **Information Architecture**: Dokumentiere Entity-Zugriff (CRUD-Operations) für jede SP - verbindet Business-Sicht (Frame 3) mit technischer Detail-Sicht
+
+**Text Blocks for Information Architecture Analysis (Miro Board / Facilitator Script):**
+
+**Block 1 - Zweck der IA-Analyse:**
+"Die Core-Entitäten Ihrer Datenarchitektur (KUNDE, VERTRAG, SCHADEN, etc.) definieren die REST API-Struktur und Frontend-Datenmodelle. → Dokumentieren Sie: Welche Entitäten sind zentral für die MVP-Masken?"
+
+**Block 2 - Entity-Zugriff Dokumentation:**
+"FÜR JEDE SP: Notieren Sie CRUD-Operationen auf Entitäten (z.B. SP_KUNDE_SUCHEN → Read: KUNDE, ADRESSE). Diese Information bestimmt die API-Endpunkt-Struktur im Integration Layer und die Datenmodelle im Frontend."
+
+**Block 3 - Shared Entities & Data Flow:**
+"SHARED ENTITIES: Entitäten wie KUNDE, die von mehreren SPs verwendet werden, zeigen uns, wo einheitliche API-Contracts notwendig sind. Bounded-Context-spezifische SPs können eigenständige REST-Ressourcen werden."
 
 ---
 
@@ -987,7 +1234,7 @@ TEMPLATE: Use Miro shapes library (rectangles, arrows, icons)
 
 ---
 
-## Total Frame Count: 17 Frames
+## Total Frame Count: 18 Frames
 
 **INPUT Frames (codecentric presents):** 6
 - Frame 1: Storyline
@@ -997,9 +1244,12 @@ TEMPLATE: Use Miro shapes library (rectangles, arrows, icons)
 - Frame 13: AI integration (partial INPUT)
 - Frame 14: Frontend comparison
 
+**HYBRID Frames (codecentric presents + WGV validates/adds):** 1
+- Frame 7.5: Migration strategy validation (Strangler Fig recommendation + objections)
+
 **CAPTURE Frames (WGV collaborates):** 11
 - Frame 3: Domain map
-- Frame 4: Mask analysis matrix
+- Frame 4: Mask analysis (Three-Tier Funnel: 2×2 Matrix, RICE Scoring, Pattern Matching, Impact/Effort Matrix)
 - Frame 5: UI/UX patterns (hybrid)
 - Frame 6: AI features brainstorm
 - Frame 7: Scope decision
@@ -1011,7 +1261,7 @@ TEMPLATE: Use Miro shapes library (rectangles, arrows, icons)
 - Frame 16: AI-driven dev learnings
 - Frame 17: Next steps
 
-**Ratio: ~35% INPUT, ~65% CAPTURE** - highly collaborative!
+**Ratio: ~33% INPUT, ~6% HYBRID, ~61% CAPTURE** - highly collaborative!
 
 ---
 
@@ -1022,10 +1272,11 @@ TEMPLATE: Use Miro shapes library (rectangles, arrows, icons)
 | 1 | INPUT | 5 min |
 | 2 | INPUT | 3 min |
 | 3 | CAPTURE | 150 min |
-| 4 | CAPTURE | 90 min |
+| 4 | CAPTURE | 60-70 min (Three-Tier Funnel: Tier 1 ~20-25min, Tier 2 ~25-30min, Tier 3 ~15-20min) |
 | 5 | INPUT | 45-60 min |
 | 6 | CAPTURE | 45 min |
 | 7 | CAPTURE | 45 min |
+| 7.5 | HYBRID | 15-20 min |
 | 8 | HYBRID | 85 min |
 | 9 | CAPTURE | 65 min |
 | 10 | INPUT | 20 min |
@@ -1039,9 +1290,9 @@ TEMPLATE: Use Miro shapes library (rectangles, arrows, icons)
 
 **Total: ~18-20 hours** (fits comfortably in 3 days with breaks)
 
-**Day 1 subtotal (Frames 1-7):** 383-398 min (6h 23min - 6h 38min) - Frame 3 extended to 150 min (full ICIS Deep Dive), Frame 5 reduced to INPUT-only (45-60 min)
+**Day 1 subtotal (Frames 1-7):** 353-378 min (5h 53min - 6h 18min) - Frame 3 extended to 150 min (full ICIS Deep Dive), Frame 4 updated to Three-Tier Funnel (60-70 min), Frame 5 reduced to INPUT-only (45-60 min)
 
-**Day 2 subtotal (Opening + Frames 8-13):** 310 min (5h 10min) - committed agenda 6h 30min, adjusted to 5h 55min (recap 10 min, AI integration 45 min), 45 min gap covered by efficient facilitation + transitions
+**Day 2 subtotal (Opening + Frames 7.5, 8-13):** 325-330 min (5h 25min - 5h 30min) - committed agenda 6h 30min, actual 5h 25min-5h 30min (recap 10 min, migration strategy validation 15-20 min, AI integration 45 min), ~60 min gap covered by breaks + efficient facilitation + transitions
 
 ---
 

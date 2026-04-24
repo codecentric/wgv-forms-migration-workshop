@@ -13,12 +13,12 @@
 
 Am Ende der Maskenanalyse-Session haben wir:
 
-✅ **Methodik vermittelt**: WGV versteht, wie man Migration Complexity bewertet  
-✅ **Framework demonstriert**: RICE + Cynefin angewendet auf 10-15 Beispielmasken  
+✅ **Methodik vermittelt**: WGV versteht, wie man Migration Complexity bewertet (2×2 Matrix)  
+✅ **Framework demonstriert**: 2×2 Matrix + RICE + Pattern-Matching auf 10-15 Beispielmasken  
 ✅ **Templates übergeben**: WGV kann Analyse selbständig fortsetzen  
 ✅ **MVP-Kandidaten identifiziert**: 3-5 Masken für Phase 1 ausgewählt  
 ✅ **Aktionsplan erstellt**: Klare Next Steps für WGV nach dem Workshop  
-✅ **Masken-Patterns erkannt**: 5-8 typische Muster dokumentiert  
+✅ **Masken-Patterns erkannt**: 5-8 typische Muster dokumentiert (Pattern-Katalog P1-P8)  
 
 ### Was wir NICHT erreichen müssen
 
@@ -34,7 +34,7 @@ Am Ende der Maskenanalyse-Session haben wir:
 
 **✅ WIR SIND:**
 - **Methodology Coaches**: Wir zeigen WGV, wie man denkt
-- **Framework-Experten**: Wir bringen bewährte Frameworks mit (RICE, Cynefin)
+- **Framework-Experten**: Wir bringen bewährte Frameworks mit (2×2 Matrix, RICE, Pattern Catalog)
 - **Facilitators**: Wir moderieren, WGV liefert Domain-Wissen
 - **Template-Providers**: Wir liefern wiederverwendbare Tools
 
@@ -115,8 +115,8 @@ codecentric Team
 
 | Phase | Dauer | Format | Fokus |
 |-------|-------|--------|-------|
-| **Part 1: Framework Introduction** | 20min | Präsentation + Diskussion | RICE, Cynefin, Impact/Effort Matrix erklären |
-| **Part 2: Funnel Approach Demonstration** | 60-70min | Kollaborativ | 900 → 50 → 15 → 5 Masken (live) |
+| **Part 1: Framework Introduction** | 20min | Präsentation + Diskussion | RICE, 2×2 Matrix, Pattern Catalog, Impact/Effort Matrix erklären |
+| **Part 2: Funnel Approach Demonstration** | 60-70min | Kollaborativ | 900 → 50 → 15 → 5 Masken (live) mit Pattern-Matching |
 | **Part 3: Templates & Playbook Übergabe** | 20min | Hands-on | WGV lernt Tools für Post-Workshop |
 | **Part 4: MVP Selection & Action Plan** | 20-30min | Entscheidung | 3-5 Masken auswählen, Next Steps definieren |
 
@@ -138,18 +138,77 @@ codecentric Team
 > 
 > Die Frage ist: '**Wie entscheiden wir, welche Masken zuerst migriert werden?**'
 > 
-> Dafür zeigen wir Ihnen heute drei bewährte Frameworks:
-> 1. **RICE Scoring** - Für Priorisierung
-> 2. **Cynefin Framework** - Für Migrations-Ansatz
-> 3. **Impact/Effort Matrix** - Für Quick Wins
+> Dafür zeigen wir Ihnen heute einen **Hybrid-Ansatz** mit bewährten Frameworks:
+> 1. **2×2 Complexity Matrix** - Einfache Klassifikation (UI × Logic Complexity)
+> 2. **RICE Scoring** - Für Priorisierung (Reach, Impact, Confidence, Effort)
+> 3. **Pattern Catalog** - 8 Migrations-Patterns (P1-P8) mit konkreten Beispielen
+> 4. **Impact/Effort Matrix** - Für Quick Wins Visualisierung
 > 
 > Wir werden diese Frameworks **gemeinsam auf 10-15 Beispielmasken anwenden**. Danach haben Sie die Werkzeuge, um die restlichen Masken selbst zu bewerten."
 
 ---
 
-### Framework 1: RICE Scoring (~7min)
+### Framework 1: 2×2 Complexity Matrix (~5min)
 
 **Präsentation**:
+
+> "Bevor wir entscheiden können, **WELCHE** Masken wir priorisieren, müssen wir verstehen, **WIE KOMPLEX** sie sind. Dafür nutzen wir eine einfache 2×2 Matrix."
+
+**Zwei einfache Fragen** → Vier Quadranten:
+
+```
+              Logic Complexity
+                    │
+        ┌───────────┼───────────┐
+        │  Q2       │    Q4     │
+   UI   │ UI-Heavy  │  Full     │
+        │           │  Custom   │
+   C  ──┼───────────┼───────────┼──
+   o    │  Q1       │    Q3     │
+   m    │ Quick     │  Logic-   │
+   p    │ Wins      │  Heavy    │
+   l    │           │           │
+   e    └───────────┴───────────┘
+   x                │
+   i          Simple      Complex
+   t
+   y
+```
+
+**Zwei Klassifikations-Fragen**:
+
+1. **UI Complexity**: "Wie viele Felder? Wie viele Tabs?"
+   - **Simple**: <20 Felder, Single-Tab
+   - **Complex**: >30 Felder, Multi-Tab
+
+2. **Logic Complexity**: "Wie viele Stored Procedures? Externe Systeme?"
+   - **Simple**: 0-1 SPs, CRUD
+   - **Complex**: 3+ SPs, Berechnungen, Integrationen
+
+**Quadranten → Migrations-Ansatz**:
+
+| Quadrant | UI | Logic | Migrations-Ansatz | Beispiel |
+|----------|----|----|-------------------|----------|
+| **Q1** | Simple | Simple | React/Angular (AI-generiert) | Adressänderung |
+| **Q2** | Complex | Simple | React/Angular (UI-Fokus) | Multi-Tab Stammdaten |
+| **Q3** | Simple | Complex | Backend-First | Tarifberechnung |
+| **Q4** | Complex | Complex | Full Custom (AI-assisted) | Vertragsabschluss |
+
+**Key Insight**:
+> "Die 2×2 Matrix hilft uns, den **Migrations-Aufwand** einzuschätzen. Q1-Masken brauchen 1-2 Wochen, Q4-Masken 4-8 Wochen. Das ist die Basis für RICE Scoring!"
+
+**Diskussion**:
+- "Macht das Sinn für Sie?"
+- "Wo würden Sie **Adressänderung** einordnen?" (→ Q1: Simple UI, Simple Logic)
+- "Wo würden Sie **Vertragsabschluss mit Tarifberechnung** einordnen?" (→ Q4: Complex UI, Complex Logic)
+
+---
+
+### Framework 2: RICE Scoring (~7min)
+
+**Präsentation**:
+
+> "Jetzt wissen wir, **WIE KOMPLEX** Masken sind (2×2 Matrix). Aber wie entscheiden wir, **WELCHE** wir zuerst migrieren? Dafür nutzen wir RICE Scoring."
 
 **Formel**:
 ```
@@ -163,17 +222,25 @@ RICE Score = (Reach × Impact × Confidence) / Effort
 | **Reach** | Wie viele Nutzer betroffen? | Nutzer pro Monat | 200 Sachbearbeiter |
 | **Impact** | Business Value | 1-5 (minimal → massive) | 4 (High) |
 | **Confidence** | Sicherheit der Schätzung | 0-100% | 70% (Medium) |
-| **Effort** | Aufwand in Person-Wochen | 0.5, 1, 2, 4, 8... | 3 Wochen |
+| **Effort** | Aufwand in Person-Wochen | **Basierend auf 2×2 Matrix!** | 3 Wochen |
+
+**Wichtig**: Der **Effort** kommt aus der 2×2 Matrix-Klassifikation:
+- Q1 (Simple/Simple): 1-2 Wochen
+- Q2 (Complex UI/Simple): 2-3 Wochen
+- Q3 (Simple/Complex Logic): 2-3 Wochen
+- Q4 (Complex/Complex): 4-8 Wochen
 
 **Beispiel-Rechnung** (live vorrechnen):
 
 ```
 Maske: "Adressänderung Kunde"
 
+2×2 Matrix: Q1 (Simple UI, Simple Logic)
+
 Reach:     200 Nutzer/Monat
 Impact:    2 (Low - einfache Datenänderung)
 Confidence: 90% (gut dokumentiert, einfach)
-Effort:    1 Woche
+Effort:    1 Woche (weil Q1!)
 
 RICE Score = (200 × 2 × 0.9) / 1 = 360
 
@@ -182,49 +249,47 @@ RICE Score = (200 × 2 × 0.9) / 1 = 360
 
 **Diskussion**:
 - "Macht das Sinn für Sie?"
-- "Welche Komponente ist am schwierigsten zu schätzen?"
+- "Sehen Sie, wie die 2×2 Matrix den Effort informiert?"
 - "Wer kann Reach und Impact am besten einschätzen?" (→ WGV!)
 
 ---
 
-### Framework 2: Cynefin Framework (~7min)
+### Framework 3: Pattern Catalog (~5min)
 
 **Präsentation**:
 
-**Vier Domänen** (Whiteboard-Sketch):
+**8 konkrete Migrations-Patterns** (detailliert in `tag1_masken_pattern_katalog.md`):
 
-```
-┌──────────────┬──────────────┐
-│  COMPLEX     │   CHAOTIC    │
-│ (Emergent)   │  (Crisis)    │
-│              │              │
-│ Probe-Sense- │  Act-Sense-  │
-│  Respond     │   Respond    │
-├──────────────┼──────────────┤
-│ COMPLICATED  │   CLEAR      │
-│ (Knowable)   │  (Obvious)   │
-│              │              │
-│ Sense-Analyze│ Sense-       │
-│  -Respond    │ Categorize-  │
-│              │  Respond     │
-└──────────────┴──────────────┘
-```
+| Pattern ID | Name | Quadrant | Migrations-Ansatz | Aufwand |
+|------------|------|----------|-------------------|---------|
+| **P1** | Simple CRUD | Q1 | React/Angular (AI-generiert) | 1-2w |
+| **P2** | Search & Filter | Q1/Q2 | React/Angular + Data Grid | 1-2w |
+| **P3** | Multi-Tab Form | Q2 | React/Angular (Tabs) | 2-3w |
+| **P4** | Wizard Workflow | Q1-Q3 | React/Angular (Stepper) | 2-4w |
+| **P5** | Calculation-Heavy | Q3 | Backend-First | 2-3w |
+| **P6** | Complex Workflow | Q4 | Full Custom (AI-assisted) | 4-8w |
+| **P7** | Report Generator | Q1 | React/Angular + Template Engine | 2-3w |
+| **P8** | Conversational Candidate | Q4 | Chatbot + Form Hybrid (MCP) | 4-8w |
 
-**Anwendung auf Masken**:
+**Pattern-Matching**:
+- 2×2 Matrix klassifiziert → Quadrant (Q1-Q4)
+- Pattern-Matching innerhalb Quadrant → Konkreter Ansatz (P1-P8)
+- Pattern → Automatisch: Technology Stack + Aufwand
 
-| Cynefin-Typ | Charakteristik | Migrations-Ansatz | Beispiel |
-|-------------|----------------|-------------------|----------|
-| **Clear** | Einfache CRUD-Logik | Oracle APEX (Low-Code) | Adressänderung |
-| **Complicated** | Komplex, aber verstehbar | AI-assistierte Migration | Vertragsabschluss |
-| **Complex** | Viele Abhängigkeiten, emergent | Iteratives Prototyping | Hybride Chatbot+Form UI |
-| **Chaotic** | Instabil, unklar, urgent | Stabilisieren, dann neu einordnen | Broken Legacy Masken |
+**Beispiel**:
+- Maske: "Adressänderung"
+- UI: Simple (<20 Felder), Logic: Simple (1 SP)
+- Quadrant: **Q1**
+- Pattern: **P1** (Simple CRUD)
+- Ansatz: React/Angular mit AI-Generierung
+- Aufwand: 1-2 Wochen
 
 **Key Insight**:
-> "RICE sagt uns **WELCHE** Masken wir priorisieren. Cynefin sagt uns **WIE** wir sie migrieren."
+> "Pattern Catalog gibt uns **konkrete Beispiele** und **Technology Stack** für jeden Masken-Typ."
 
 ---
 
-### Framework 3: Impact/Effort Matrix (~5min)
+### Framework 4: Impact/Effort Matrix (~3min)
 
 **Präsentation** (2×2 Matrix auf Whiteboard):
 
@@ -254,8 +319,9 @@ RICE Score = (200 × 2 × 0.9) / 1 = 360
 ---
 
 **Output Part 1**:
-- ✅ WGV versteht RICE, Cynefin, Impact/Effort Matrix
-- ✅ Gemeinsames Vokabular etabliert
+- ✅ WGV versteht 2×2 Complexity Matrix, RICE Scoring, Pattern Catalog, Impact/Effort Matrix
+- ✅ Gemeinsames Vokabular etabliert (Quadranten Q1-Q4, Patterns P1-P8)
+- ✅ Logischer Ablauf verinnerlicht: Complexity → Effort → Priorisierung
 
 ---
 
@@ -330,7 +396,7 @@ RICE Score = (200 × 2 × 0.9) / 1 = 360
 
 **Vorbereitung**:
 - Miro/Whiteboard mit 2D-Matrix vorbereiten
-- Achsen: **Bounded Context** (X) × **Cynefin Complexity** (Y)
+- Achsen: **Bounded Context** (X) × **2×2 Matrix Complexity** (Y)
 
 **Aktivität**: Masken clustern
 
@@ -355,7 +421,7 @@ Bounded Context (aus Domain Mapping):
 - Post-its oder Miro-Karten nutzen
 - Ergebnis: z.B. 20 in Vertrag, 15 in Schaden, 12 in Kunde, etc.
 
-**Schritt 2: Cynefin Classification** (15min)
+**Schritt 2: 2×2 Matrix Classification** (15min)
 
 Frage: "Innerhalb jedes Bounded Context: Welche Masken sind **Clear**, welche **Complicated**, welche **Complex**?"
 
@@ -363,7 +429,7 @@ Frage: "Innerhalb jedes Bounded Context: Welche Masken sind **Clear**, welche **
 
 ```
                  Bounded Context
-Cynefin          │ Vertrag │ Schaden │ Kunde │ Finance │
+2×2 Matrix          │ Vertrag │ Schaden │ Kunde │ Finance │
 ─────────────────┼─────────┼─────────┼───────┼─────────┤
 Clear (Simple)   │  ●●●    │  ●●     │  ●●●● │  ●      │
 ─────────────────┼─────────┼─────────┼───────┼─────────┤
@@ -383,7 +449,7 @@ Complex          │  ●      │  ●      │       │         │
 Frage: "Wählen wir **1-2 repräsentative Masken pro Zelle** aus."
 
 **Auswahlkriterien**:
-- Typisch für diese Kombination (Bounded Context × Cynefin)
+- Typisch für diese Kombination (Bounded Context × 2×2 Matrix)
 - Gut bekannt (Knowledge Risk niedrig)
 - Idealerweise: Mix aus Quick Win + Strategic
 
@@ -430,7 +496,7 @@ Frage: "Wählen wir **1-2 repräsentative Masken pro Zelle** aus."
 
 3. **Effort**: "Person-Wochen Schätzung?"
    - Basierend auf:
-     - Cynefin-Typ (Clear = 0.5-1, Complicated = 2-4, Complex = 4-8)
+     - 2×2 Matrix-Typ (Clear = 0.5-1, Complicated = 2-4, Complex = 4-8)
      - Anzahl Domains (Multi-Domain +50%)
      - Integration Complexity (External Systems +50%)
    - Gemeinsam schätzen
@@ -508,7 +574,7 @@ Rang │ Mask Name              │ RICE Score │ Quadrant
   - Grün: RICE > 100 (Quick Wins)
   - Gelb: RICE 50-100 (Strategic)
   - Rot: RICE < 50 (Low Priority)
-- **Pivot Table** vorbereitet (nach Bounded Context, Cynefin-Typ)
+- **Pivot Table** vorbereitet (nach Bounded Context, 2×2 Matrix-Typ)
 
 **Live-Demo** (5min):
 - Zeigen, wie man eine neue Maske einträgt
@@ -519,21 +585,21 @@ Rang │ Mask Name              │ RICE Score │ Quadrant
 
 ---
 
-### Template 2: Cynefin Classification Matrix
+### Template 2: 2×2 Matrix Classification Matrix
 
 **Übergabe** (Miro Board oder Excel):
 
 **Miro-Template**:
-- 2D-Matrix: Bounded Context × Cynefin-Typ
+- 2D-Matrix: Bounded Context × 2×2 Matrix-Typ
 - Drag-and-Drop Masken-Karten
 - Farbcodierung nach Priorität
 
 **Alternative: Excel-Template**:
 - Dropdown für "Bounded Context"
-- Dropdown für "Cynefin Type" (Clear, Complicated, Complex)
+- Dropdown für "2×2 Matrix Type" (Clear, Complicated, Complex)
 - Auto-Filter aktiviert
 
-**File**: `WGV_Cynefin_Classification.xlsx` oder Miro-Link
+**File**: `WGV_2×2 Matrix_Classification.xlsx` oder Miro-Link
 
 ---
 
@@ -592,7 +658,7 @@ Bewertung der verbleibenden ~885 Masken mit der gelernten Methodik.
 3. Ergebnis: ~50-100 Kandidaten-Masken
 
 ### Phase 3: Pattern-Based Clustering (2-3 Tage)
-1. Öffnen Sie `WGV_Cynefin_Classification.xlsx`
+1. Öffnen Sie `WGV_2×2 Matrix_Classification.xlsx`
 2. Ordnen Sie Masken nach Bounded Context
 3. Klassifizieren Sie jede Maske (Clear/Complicated/Complex)
 4. Identifizieren Sie 1-2 repräsentative Masken pro Pattern
@@ -636,7 +702,7 @@ codecentric steht für Review und Rückfragen zur Verfügung.
 - "Benötigen Sie Unterstützung von codecentric für Review?"
 
 **Output Part 3**:
-- ✅ 3 Templates übergeben (RICE, Cynefin, Impact/Effort)
+- ✅ 3 Templates übergeben (RICE, 2×2 Matrix, Impact/Effort)
 - ✅ Playbook dokumentiert
 - ✅ WGV weiß, wie sie nach Workshop fortfahren
 
@@ -669,27 +735,27 @@ MVP-Kandidaten (3-5 Masken):
 
 1. Adressänderung Kunde (RICE: 360, Quick Win)
    - Bounded Context: Kunde
-   - Cynefin: Clear (Simple CRUD)
-   - Ansatz: Oracle APEX Kandidat
+   - 2×2 Matrix: Clear (Simple CRUD)
+   - Ansatz: React/Angular (AI-generiert) Kandidat
 
 2. Partnersuche (RICE: 200, Quick Win)
    - Bounded Context: Vertrag
-   - Cynefin: Clear
+   - 2×2 Matrix: Clear
    - Ansatz: React/Angular Simple UI
 
 3. Vertragsabschluss Neugeschäft (RICE: 37.5, Strategic)
    - Bounded Context: Vertrag
-   - Cynefin: Complicated
+   - 2×2 Matrix: Complicated
    - Ansatz: Custom Development, AI-assisted
 
 4. Schadenanlage KFZ (RICE: 30, Strategic)
    - Bounded Context: Schaden
-   - Cynefin: Complicated
+   - 2×2 Matrix: Complicated
    - Ansatz: Custom Development
 
 5. (Optional) Hybride Chatbot-Maske (RICE: TBD, Experiment)
    - Bounded Context: TBD
-   - Cynefin: Complex
+   - 2×2 Matrix: Complex
    - Ansatz: Prototype für Conversational UI
 ```
 
@@ -780,12 +846,12 @@ MVP-Kandidaten (3-5 Masken):
 
 ---
 
-### Challenge 4: "Cynefin-Klassifikation wird debattiert"
+### Challenge 4: "2×2 Matrix-Klassifikation wird debattiert"
 
 **Symptom**: Team uneinig, ob Maske "Complicated" oder "Complex" ist
 
 **Lösung**:
-- **Es gibt kein richtig/falsch**: Cynefin ist ein Werkzeug, keine Wissenschaft
+- **Es gibt kein richtig/falsch**: 2×2 Matrix ist ein Werkzeug, keine Wissenschaft
 - **Pragmatisch**: "Wir markieren als Complicated, passen aber Confidence an"
 - **Dokumentieren**: "Unsicher → Confidence = 50%"
 - **Später validieren**: "Tag 2 zeigt uns, ob Einschätzung stimmt"
@@ -821,7 +887,7 @@ MVP-Kandidaten (3-5 Masken):
 
 Am Ende der Maskenanalyse-Session haben wir erfolgreich:
 
-✅ **Methodik vermittelt**: WGV kann RICE + Cynefin selbständig anwenden  
+✅ **Methodik vermittelt**: WGV kann RICE + 2×2 Matrix selbständig anwenden  
 ✅ **Framework demonstriert**: 10-15 Masken live bewertet  
 ✅ **Templates übergeben**: WGV hat Tools (Excel, Miro) für Post-Workshop  
 ✅ **MVP-Scope definiert**: 3-5 Kandidaten-Masken für Tag 2 ausgewählt  
@@ -853,7 +919,7 @@ Am Ende der Maskenanalyse-Session haben wir erfolgreich:
 
 **Was wir übergeben**:
 - 3-5 MVP-Masken → Basis für UI/UX Skizzen
-- Cynefin-Classification → Informiert UI Pattern (CRUD vs. Workflow vs. Chatbot)
+- 2×2 Matrix-Classification → Informiert UI Pattern (CRUD vs. Workflow vs. Chatbot)
 - Quick Wins → Fokus für User Journey Analyse
 
 **Beispiel**:
@@ -882,7 +948,7 @@ Am Ende der Maskenanalyse-Session haben wir erfolgreich:
 **Was Tag 2 nutzt**:
 - **3-5 MVP-Masken** → Scope für technische Validierung
 - **RICE-Scored Liste** → Priorisierung für Stored Procedure Review
-- **Cynefin-Classification** → Migrations-Ansatz (APEX vs. Custom vs. Prototype)
+- **2×2 Matrix-Classification** → Migrations-Ansatz (React/Angular vs. Custom vs. Prototype)
 - **Effort-Schätzungen** → Basis für Roadmap-Planung
 
 ---
@@ -895,16 +961,16 @@ Am Ende der Maskenanalyse-Session haben wir erfolgreich:
 - [ ] WGV kontaktiert: Masken-Inventar Spreadsheet vorbereiten
 - [ ] Excel-Templates vorbereiten:
   - [ ] `WGV_RICE_Scoring_Template.xlsx` (mit Formeln)
-  - [ ] `WGV_Cynefin_Classification.xlsx` (mit Dropdowns)
+  - [ ] `WGV_2×2 Matrix_Classification.xlsx` (mit Dropdowns)
 - [ ] Miro-Board vorbereiten:
-  - [ ] 2D-Matrix (Bounded Context × Cynefin)
+  - [ ] 2D-Matrix (Bounded Context × 2×2 Matrix)
   - [ ] Impact/Effort Matrix (2×2)
   - [ ] Post-its für Masken
 - [ ] Playbook-Dokument vorbereiten: `WGV_Maskenanalyse_Playbook.md`
 - [ ] Beispiel-Rechnungen vorbereiten (RICE für 2-3 Masken)
 
 **Während des Workshops**:
-- [ ] Framework-Erklärung: RICE, Cynefin, Impact/Effort (~20min)
+- [ ] Framework-Erklärung: RICE, 2×2 Matrix, Impact/Effort (~20min)
 - [ ] Funnel Approach live demonstrieren (900 → 50 → 15 → 5)
 - [ ] Mindestens 10 Masken mit RICE scoren (live, gemeinsam)
 - [ ] Templates ausfüllen während Workshop (nicht nachher!)
@@ -928,7 +994,7 @@ Spalten:
 - Mask ID
 - Mask Name
 - Bounded Context (Dropdown)
-- Cynefin Type (Dropdown: Clear / Complicated / Complex)
+- 2×2 Matrix Type (Dropdown: Clear / Complicated / Complex)
 - Reach (Nutzer/Monat)
 - Impact (1-5, Dropdown)
 - Confidence (%, Slider)
@@ -943,19 +1009,19 @@ Conditional Formatting:
 
 ---
 
-**File 2: `WGV_Cynefin_Classification.xlsx`**
+**File 2: `WGV_2×2 Matrix_Classification.xlsx`**
 
 Spalten:
 - Mask ID
 - Mask Name
 - Bounded Context
-- Cynefin Type
+- 2×2 Matrix Type
 - Characteristics (Text: Warum diese Klassifikation?)
-- Recommended Approach (APEX / Custom / Prototype)
+- Recommended Approach (React/Angular / Custom / Prototype)
 
 Pivot Table:
 - Rows: Bounded Context
-- Columns: Cynefin Type
+- Columns: 2×2 Matrix Type
 - Values: Count of Masks
 
 ---
@@ -986,7 +1052,7 @@ Inhalt (siehe Part 3 oben):
 
 - **Decision Frameworks**: `facilitation/decision_frameworks.md`
   - RICE Scoring (Detail-Erklärung)
-  - Cynefin Framework (Hintergrund)
+  - 2×2 Matrix Framework (Hintergrund)
   - Impact/Effort Matrix (Visualisierung)
 - **Domain Mapping**: `facilitation/tag1_domain_mapping_guide.md`
   - Bounded Contexts (Input für Clustering)
@@ -999,7 +1065,7 @@ Inhalt (siehe Part 3 oben):
 
 - **MVP-Scope** → Input für "Technische Validierung"
 - **RICE-Scores** → Priorisierung für Stored Procedure Review
-- **Cynefin-Classification** → Migrations-Ansatz (APEX vs. Custom)
+- **2×2 Matrix-Classification** → Migrations-Ansatz (React/Angular vs. Custom)
 - **Effort-Estimates** → Roadmap-Planung
 
 ---
@@ -1070,7 +1136,7 @@ Inhalt (siehe Part 3 oben):
 > Stattdessen zeigen wir Ihnen die **Methodik**, wie wir so eine Migration bewerten. Wir analysieren **gemeinsam 10-15 repräsentative Masken**, und Sie lernen dabei das Framework kennen, das Sie nach dem Workshop auf die restlichen anwenden können.
 >
 > Am Ende haben Sie:
-> - ✅ Ein wiederverwendbares Framework (RICE, Cynefin)
+> - ✅ Ein wiederverwendbares Framework (RICE, 2×2 Matrix)
 > - ✅ Templates für Ihre weitere Arbeit
 > - ✅ Eine erste Auswahl von 3-5 MVP-Masken
 > - ✅ Einen Aktionsplan für die nächsten Wochen
@@ -1095,7 +1161,7 @@ Inhalt (siehe Part 3 oben):
 >
 > Jetzt übergeben wir Ihnen die **Werkzeuge**, damit Sie nach dem Workshop weitermachen können. Drei Templates:
 > 1. RICE Scoring Excel-Sheet
-> 2. Cynefin Classification Matrix
+> 2. 2×2 Matrix Classification Matrix
 > 3. Impact/Effort Visualisierung
 >
 > Plus ein **Playbook**: Step-by-Step, wie Sie die restlichen 885 Masken bewerten."
@@ -1105,7 +1171,7 @@ Inhalt (siehe Part 3 oben):
 ### Closing Statement
 
 > "Perfekt! Wir haben heute:
-> - ✅ Die Methodik gelernt (RICE, Cynefin)
+> - ✅ Die Methodik gelernt (RICE, 2×2 Matrix)
 > - ✅ 15 Masken gemeinsam bewertet
 > - ✅ 5 MVP-Kandidaten ausgewählt
 > - ✅ Templates und Playbook übergeben

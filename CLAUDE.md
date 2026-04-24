@@ -80,6 +80,8 @@ This is a **documentation and planning repository** for a codecentric workshop w
 │   ├── tag1_icis_deep_dive_guide.md             # Day 1: ICIS-Klassik & ICIS+ analysis (60 questions, 9 templates)
 │   ├── tag1_icis_deep_dive_cheat_sheet.md       # Day 1: Quick reference for ICIS Deep Dive facilitators
 │   ├── tag1_maskenanalyse_guide.md              # Day 1: Mask analysis methodology
+│   ├── tag1_maskenanalyse_fragenkatalog.md      # Day 1: 26-question catalog for mask assessment (RICE scoring)
+│   ├── tag1_masken_pattern_katalog.md           # Day 1: 8 migration patterns (2×2 Matrix, Oracle-agnostic)
 │   ├── tag1_uiux_konzept_guide.md               # Day 1: UI/UX concept development
 │   ├── tag1_features_ai_guide.md                # Day 1: AI features identification
 │   ├── tag2_architecture_decisions_guide.md     # Day 2: Architecture & technology decisions (7 activities)
@@ -139,7 +141,7 @@ These role definitions are used to:
 - **Miro workshop structure**: `angebot/miro_board_structure.md` (17 frames across 4 boards)
 - Workshop materials are in **German**
 - **Role definitions**: See `/rollen` directory for expert personas
-- **Facilitation guides**: Complete guides for Day 1 (6 guides) and Day 2 (2 guides) in `/facilitation`
+- **Facilitation guides**: Complete guides for Day 1 (10 guides) and Day 2 (2 guides) in `/facilitation`
 
 ### When Updating Workshop Content
 
@@ -180,7 +182,29 @@ The `/facilitation` directory contains methods, frameworks, and tools for facili
 
 - **tag1_icis_deep_dive_cheat_sheet.md**: 1-page quick reference for ICIS Deep Dive facilitators
 
-- **tag1_maskenanalyse_guide.md**: Structured methodology for analyzing Oracle Forms masks
+- **tag1_maskenanalyse_guide.md**: Structured methodology for analyzing Oracle Forms masks (~1.5-2h):
+  - Methodology Transfer approach (Framework Teaching + Sample-Based Demonstration)
+  - Three-tier funnel: 900 masks → 50-100 → 10-15 → 3-5 MVP candidates
+  - RICE Scoring, Cynefin Framework, Impact/Effort Matrix application
+  - Templates and playbook for post-workshop self-assessment by WGV
+  - Integration with Domain Mapping and UI/UX sessions
+
+- **tag1_maskenanalyse_fragenkatalog.md**: 26-question catalog for mask assessment (~1.5-2h):
+  - Structured question catalog in 4 categories: Business Value (7 questions), Functionality & Complexity (7 questions), Technical Migration (7 questions), Priorisierung & Patterns (5 questions)
+  - Direct mapping to RICE components (Reach, Impact, Confidence, Effort)
+  - 2×2 Complexity Matrix classification (UI Complexity × Logic Complexity → Quadrants Q1-Q4)
+  - Pattern-Matching guidance (8 patterns: P1-P8, Oracle-agnostic, no APEX)
+  - Complete example: "Vertragsabschluss Neugeschäft" with RICE calculation and 2×2 Matrix classification
+  - Excel template structure for post-workshop use by WGV
+  - Companion document to tag1_maskenanalyse_guide.md (practical tool vs. methodology)
+
+- **tag1_masken_pattern_katalog.md**: 8 migration patterns for Oracle Forms masks (~10min explanation):
+  - Pattern catalog with 2×2 Complexity Matrix classification (UI × Logic)
+  - 8 patterns: P1 (Simple CRUD), P2 (Search & Filter), P3 (Multi-Tab Form), P4 (Wizard Workflow), P5 (Calculation-Heavy), P6 (Complex Workflow), P7 (Report Generator), P8 (Conversational Candidate)
+  - Oracle-agnostic technology stack (NO APEX - all React/Angular or custom)
+  - Migration approach, effort estimates (1-8 weeks), and risk assessment per pattern
+  - Pattern-matching workflow for workshop (2×2 Matrix → Pattern → Tech Stack)
+  - Integration with ICIS Deep Dive and UI/UX Konzept sessions
 
 - **tag1_uiux_konzept_guide.md**: Guide for developing UI/UX concepts with hybrid conversational + forms interface
 
